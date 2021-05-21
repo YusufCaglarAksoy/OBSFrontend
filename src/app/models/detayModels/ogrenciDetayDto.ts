@@ -14,7 +14,7 @@ export interface OgrenciDetayDto{
     bankAdi:string
     subeAdi:string
     subeKodu:number
-    hesapNumarasi:string
+    hesapNumarasi:string 
     iBAN:string
     hesapSahibininAdiSoyadi:string
     danismanAdi:string
