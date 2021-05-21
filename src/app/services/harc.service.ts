@@ -39,7 +39,7 @@ export class HarcService {
     return this.httpClient.get<ListResponseModel<HarcDetayDto>>(this.apiUrl+"getbyid?id="+id)
   }
 
-  getByDersId(id :number):Observable<ListResponseModel<HarcDetayDto>> {
+  getByOgrenciId(id :number):Observable<ListResponseModel<HarcDetayDto>> {
     return this.httpClient.get<ListResponseModel<HarcDetayDto>>(this.apiUrl+"getbyogrenciid?id="+id)
   }
-}
+} 
