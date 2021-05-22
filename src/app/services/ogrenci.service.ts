@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { OgrenciDetayDto } from '../models/detayModels/ogrenciDetayDto';
 import { Ogrenci } from '../models/kullaniciModels/ogrenci';
+import { LoginDto } from '../models/kullaniciModels/RegisterModels/loginDto';
 import { OgrenciForRegisterDto } from '../models/kullaniciModels/RegisterModels/ogrenciForRegisterDto';
 import { ListResponseModel } from '../models/responseModels/listResponseModel';
 import { ResponseModel } from '../models/responseModels/ResponseModel';
@@ -27,8 +28,8 @@ export class OgrenciService {
     return this.httpClient.post<ResponseModel>(this.apiUrl+"update",ogrenci)
   }
 
-  login(ogrenci : Ogrenci):Observable<ResponseModel> {
-    return this.httpClient.post<ResponseModel>(this.apiUrl+"add",ogrenci)
+  login(loginDto : LoginDto):Observable<ResponseModel> {
+    return this.httpClient.post<ResponseModel>(this.apiUrl+"login",loginDto)
   }
 
   getall():Observable<ListResponseModel<Ogrenci>> {

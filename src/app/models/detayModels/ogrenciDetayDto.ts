@@ -21,5 +21,5 @@ export interface OgrenciDetayDto{
     danismanSoyadi:string
     danismanEMail:string
     danismanTelefonNumarasi:string
-    danismanUnvanAdi:string
+    danismanUnvanAdi:string 
 }

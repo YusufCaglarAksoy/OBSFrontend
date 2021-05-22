@@ -1,24 +1,23 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { OgrenciFotograf } from '../models/fotografModels/ogrenciFotograf';
+import { AkademisyenDetayDto } from '../models/detayModels/akademisyenDetayDto';
+import { AkademisyenFotograf } from '../models/fotografModels/akademisyenFotograf';
 import { ListResponseModel } from '../models/responseModels/listResponseModel';
 import { ResponseModel } from '../models/responseModels/ResponseModel';
-import { SingleResponseModel } from '../models/responseModels/singleResponseModel';
 
 @Injectable({
   providedIn: 'root'
 })
-export class OgrenciFotografService {
-
+export class AkademisyenFotografService {
   constructor(private httpClient : HttpClient) { }
 
-  apiUrl = 'https://localhost:44390/api/ogrencifotograflar/'
+  apiUrl = 'https://localhost:44390/api/akademisyenFotograflar/'
 
   add( image : File , ogrenciId:number):Observable<ResponseModel> {
     const formData:FormData = new FormData();
     formData.append('Image',image)
-    formData.append('OgrenciId', ogrenciId.toString())
+    formData.append('AkademisyenId', ogrenciId.toString())
     return this.httpClient.post<ResponseModel>(this.apiUrl+"add",formData,{reportProgress:true, responseType: 'json'})
   }
 
@@ -29,19 +28,19 @@ export class OgrenciFotografService {
   update(image : File , ogrenciId:number):Observable<ResponseModel> {
     const formData:FormData = new FormData();
     formData.append('Image',image)
-    formData.append('OgrenciId', ogrenciId.toString())
+    formData.append('AkademisyenId', ogrenciId.toString())
     return this.httpClient.post<ResponseModel>(this.apiUrl+"update",formData,{reportProgress:true, responseType: 'json'})
   }
 
-  getall():Observable<ListResponseModel<OgrenciFotograf>> {
-    return this.httpClient.get<ListResponseModel<OgrenciFotograf>>(this.apiUrl+"getall")
+  getall():Observable<ListResponseModel<AkademisyenFotograf>> {
+    return this.httpClient.get<ListResponseModel<AkademisyenFotograf>>(this.apiUrl+"getall")
   }
 
-  getById(id : number):Observable<ListResponseModel<OgrenciFotograf>> {
-    return this.httpClient.get<ListResponseModel<OgrenciFotograf>>(this.apiUrl+"getbyid?id="+id)
+  getById(id : number):Observable<ListResponseModel<AkademisyenFotograf>> {
+    return this.httpClient.get<ListResponseModel<AkademisyenFotograf>>(this.apiUrl+"getbyid?id="+id)
   }
 
-  getByOgrenciId(id : number):Observable<ListResponseModel<OgrenciFotograf>> {
-    return this.httpClient.get<ListResponseModel<OgrenciFotograf>>(this.apiUrl+"getbyogrenciid?ogrenciId="+id)
+  getByAkademisyenId(id : number):Observable<ListResponseModel<AkademisyenFotograf>> {
+    return this.httpClient.get<ListResponseModel<AkademisyenFotograf>>(this.apiUrl+"getbyakademisyenid?akademisyenId="+id)
   }
 }
