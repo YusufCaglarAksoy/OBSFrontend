@@ -1,21 +1,65 @@
-
-<div class="logo">
-    <a href="https://www.creative-tim.com" class="simple-text logo-mini">
-      <div class="logo-img">
-          <img src="./assets/img/angular2-logo-white.png"/>
-      </div>
-    </a>
-    <a href="https://www.creative-tim.com" class="simple-text logo-normal">
-        Creative Tim
-    </a>
-</div>
-<div class="sidebar-wrapper">
-    <ul class="nav">
-        <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}} nav-item">
-            <a [routerLink]="[menuItem.path]">
-                <i class="now-ui-icons {{menuItem.icon}}"></i>
-                <p>{{menuItem.title}}</p>
-            </a>
+<main>
+    <h1 class="visually-hidden ">Sidebars examples</h1>
+  
+    <div class="d-flex flex-column wrapper flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
+      <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+          <button href="#" class="nav-link text-white align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#Genel-collapse" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+                <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
+              </svg>
+            Genel İşlemler
+          </button>
+          <div class="collapse" id="Genel-collapse">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li><a href="#" class="link-dark rounded nav-link text-white">Genel Bilgiler</a></li>
+              <li><a href="#" class="link-dark rounded nav-link text-white">Danışman Bilgileri</a></li>
+              <li><a href="#" class="link-dark rounded nav-link text-white">Dönem Dersleri</a></li>
+              <li><a href="#" class="link-dark rounded nav-link text-white">Bolum Dersleri</a></li>
+              <li><a href="#" class="link-dark rounded nav-link text-white">Ders Programı</a></li>
+            </ul>
+          </div>
         </li>
-    </ul>
-</div>
+        <li class="nav-item">
+            <button href="#" class="nav-link text-white align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#Ders-collapse" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-bookmark" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M6 8V1h1v6.117L8.743 6.07a.5.5 0 0 1 .514 0L11 7.117V1h1v7a.5.5 0 0 1-.757.429L9 7.083 6.757 8.43A.5.5 0 0 1 6 8z"></path>
+                    <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"></path>
+                    <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"></path>
+                  </svg>
+              Ders İşlemleri
+            </button>
+            <div class="collapse" id="Ders-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#" class="link-dark rounded nav-link text-white">Not Listesi</a></li>
+                <li><a href="#" class="link-dark rounded nav-link text-white">Harç Bilgileri</a></li>
+                <li><a href="#" class="link-dark rounded nav-link text-white">Sınav Takvimi</a></li>
+                <li><a href="#" class="link-dark rounded nav-link text-white">Devamsızlık Durumu</a></li>
+                <li><a href="#" class="link-dark rounded nav-link text-white">Ders Kayıt</a></li>
+                <li><a href="#" class="link-dark rounded nav-link text-white">Transkript</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <button href="#" class="nav-link text-white align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#Kullanıcı-collapse" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"></path>
+                  </svg>
+              Kullanıcı İşlemleri
+            </button>
+            <div class="collapse" id="Kullanıcı-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#" class="link-dark rounded nav-link text-white">Gelen Mailler</a></li>
+                <li><a href="#" class="link-dark rounded nav-link text-white">Gönderilen Mailler</a></li>
+                <li><a href="#" class="link-dark rounded nav-link text-white">Kullanıcı Bilgilerim</a></li>
+                <li><a href="#" class="link-dark rounded nav-link text-white">Mail oluştur</a></li>
+              </ul>
+            </div>
+          </li>
+      </ul>
+      <hr>
+    </div>
+  
+    <div class="b-example-divider"></div>
+  </main>
