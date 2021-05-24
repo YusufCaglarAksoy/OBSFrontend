@@ -3,12 +3,11 @@
     padding: 20px;
     position: relative;
     left: 65%;
-    background: #191919;
+    background: #fffafb;
     text-align: center;
     transition: 0.25s;
     margin-top: 200px;
-    border-radius: 15px;
-    margin-left: 350px;
+    border-radius: 50px;
     opacity: 0.80;
   }
   
@@ -19,41 +18,64 @@
     display: block;
     margin: 20px auto;
     text-align: center;
-    border: 2px solid #4b5358;
+    border: 2px solid #9b1e48;
     padding: 10px 10px;
     width: 280px;
     outline: none;
-    color: white;
+    color: #9b1e48;
     border-radius: 24px;
     transition: 0.25s
   }
   
   .box h1 {
-    color: white;
+    color: #9b1e48;
     text-transform: uppercase;
-    font-weight: 500
+    font-weight: 500;
+    font-size: 0.96cm;
   }
   
   .box input[type="number"]:focus,
   .box input[type="password"]:focus {
     width: 350px;
-    border-color: #98dde9
+    border-color: #9b1e48
   }
   
   .box input[type="submit"] {
     border: 0;
-    background: none;
+    background: #9b1e48;
     display: block;
     margin: 20px auto;
     text-align: center;
-    border: 2px solid #556061;
+    border: 2px solid #ffffff;
     padding: 6px 40px;
     outline: none;
-    color: white;
+    border-color: #000000;
+    color: #ffffff;
     border-radius: 24px;
     transition: 0.25s;
     cursor: pointer
   }
+
+  .aw-zoom2
+  {
+      position: relative;
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      -moz-transform: scale(1);
+      transition: all .3s ease-in;
+      -moz-transition: all .3s ease-in;
+      -webkit-transition: all .3s ease-in;
+      -ms-transition: all .3s ease-in;
+  }
+  
+  .aw-zoom2:hover
+  {
+      z-index:1;
+      -webkit-transform: scale(2);
+      -moz-transform: scale(1);
+      transform: scale(1.15);
+  }
+  
   
   
   

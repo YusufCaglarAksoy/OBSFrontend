@@ -12,6 +12,9 @@ import { IdareciGirisComponent } from './components/idareci-giris/idareci-giris.
 import { NavbarComponent } from './components/navbar/navbar.component'
 import { FormsModule, ReactiveFormsModule} from "@angular/forms"
 import { OgrenciGirisComponent } from './components/ogrenci-giris/ogrenci-giris.component';
+import { AkadamisyenAnasayfaComponent } from './components/akadamisyen-anasayfa/akadamisyen-anasayfa.component';
+import { IdareciAnasayfaComponent } from './components/idareci-anasayfa/idareci-anasayfa.component';
+import { OgrenciAnaSayfaComponent } from './components/ogrenci-ana-sayfa/ogrenci-ana-sayfa.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +23,10 @@ import { OgrenciGirisComponent } from './components/ogrenci-giris/ogrenci-giris.
     AkademisyenGirisComponent,
     IdareciGirisComponent,
     OgrenciGirisComponent,
-    NavbarComponent
+    NavbarComponent,
+    AkadamisyenAnasayfaComponent,
+    IdareciAnasayfaComponent,
+    OgrenciAnaSayfaComponent
   ],
   imports: [
     BrowserModule,

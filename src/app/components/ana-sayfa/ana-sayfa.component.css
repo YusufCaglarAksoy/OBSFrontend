@@ -1,0 +1,57 @@
+.d-grid button {
+    border: 0;
+    background:rgba(255, 255, 255, 0.425);
+    display: block;
+    font-size: 0.4cm;
+    font-style:initial;
+    text-align: center;
+    background-color: #9b1e48;
+    border: 2px solid #f1ebeb;
+    padding: 6px 30px;
+    outline: none;
+    color: rgb(255, 255, 255);
+    border-radius: 28px;
+    transition: 0.25s;
+    cursor: pointer
+    
+  }
+
+  .aw-zoom
+{
+    position: relative;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    -ms-transition: all .3s ease-in;
+}
+
+.aw-zoom:hover
+{
+    z-index:1;
+    -webkit-transform: scale(2);
+    -moz-transform: scale(1);
+    transform: scale(1.25);
+}
+
+.aw-zoom2
+{
+    position: relative;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    -ms-transition: all .3s ease-in;
+}
+
+.aw-zoom2:hover
+{
+    z-index:1;
+    -webkit-transform: scale(2);
+    -moz-transform: scale(1);
+    transform: scale(1.15);
+}
