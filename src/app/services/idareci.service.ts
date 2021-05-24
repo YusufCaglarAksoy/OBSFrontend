@@ -5,8 +5,10 @@ import { IdareciDetayDto } from '../models/detayModels/idareciDetayDto';
 import { Idareci } from '../models/kullaniciModels/idareci';
 import { IdareciForRegisterDto } from '../models/kullaniciModels/RegisterModels/idareciForRegisterDto';
 import { LoginDto } from '../models/kullaniciModels/RegisterModels/loginDto';
+import { TokenModel } from '../models/kullaniciModels/RegisterModels/tokenModel';
 import { ListResponseModel } from '../models/responseModels/listResponseModel';
 import { ResponseModel } from '../models/responseModels/ResponseModel';
+import { SingleResponseModel } from '../models/responseModels/singleResponseModel';
 
 @Injectable({
   providedIn: 'root'
@@ -29,8 +31,12 @@ export class IdareciService {
   getAll():Observable<ListResponseModel<Idareci>>{
     return this.httpClient.get<ListResponseModel<Idareci>>(this.apiUrl+"getall");
   }
-  login(loginDto:LoginDto):Observable<ResponseModel>{
-    return this.httpClient.get<ResponseModel>(this.apiUrl+"login");
+  login(loginDto:LoginDto):Observable<SingleResponseModel<TokenModel>>{
+    this.getBySicilNo(loginDto.loginNo).subscribe(response =>{
+      let user = response.data
+      localStorage.setItem('user',JSON.stringify(user));
+    })
+    return this.httpClient.post<SingleResponseModel<TokenModel>>(this.apiUrl+"login",loginDto);
   }
   getById(sicilNo:number):Observable<ListResponseModel<IdareciDetayDto>>{
     return this.httpClient.get<ListResponseModel<IdareciDetayDto>>(this.apiUrl+"GetById?id="+sicilNo);

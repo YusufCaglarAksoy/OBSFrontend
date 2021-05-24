@@ -5,8 +5,10 @@ import { AkademisyenDetayDto } from '../models/detayModels/akademisyenDetayDto';
 import { Akademisyen } from '../models/kullaniciModels/akademisyen';
 import { AkademisyenForRegisterDto } from '../models/kullaniciModels/RegisterModels/akademisyenForRegisterDto';
 import { LoginDto } from '../models/kullaniciModels/RegisterModels/loginDto';
+import { TokenModel } from '../models/kullaniciModels/RegisterModels/tokenModel';
 import { ListResponseModel } from '../models/responseModels/listResponseModel';
 import { ResponseModel } from '../models/responseModels/ResponseModel';
+import { SingleResponseModel } from '../models/responseModels/singleResponseModel';
 
 @Injectable({
   providedIn: 'root'
@@ -27,8 +29,12 @@ export class AkademisyenService {
     return this.httpClient.post<ResponseModel>(this.apiUrl+"update",akademisyen)
   }
 
-  login(loginDto : LoginDto):Observable<ResponseModel> {
-    return this.httpClient.post<ResponseModel>(this.apiUrl+"login",loginDto)
+  login(loginDto : LoginDto):Observable<SingleResponseModel<TokenModel>> {
+    this.getBySicilNo(loginDto.loginNo).subscribe(response =>{
+      let user = response.data
+      localStorage.setItem('user',JSON.stringify(user));
+    })
+    return this.httpClient.post<SingleResponseModel<TokenModel>>(this.apiUrl+"login",loginDto)
   }
 
   getall():Observable<ListResponseModel<Akademisyen>> {

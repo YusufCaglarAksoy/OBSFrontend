@@ -34,6 +34,10 @@ export class SinavService {
     return this.httpClient.get<ListResponseModel<SinavDetayDto>>(this.apiUrl+"getsinavDetaylari")
   }
 
+  getByAkademisyenId(id:number):Observable<ListResponseModel<SinavDetayDto>> {
+    return this.httpClient.get<ListResponseModel<SinavDetayDto>>(this.apiUrl+"getbyakademisyenid?id="+id)
+  }
+
   getById(id : number):Observable<ListResponseModel<SinavDetayDto>> {
     return this.httpClient.get<ListResponseModel<SinavDetayDto>>(this.apiUrl+"getbyid?id="+id)
   }

@@ -1,1 +1,17 @@
-<p>akademisyen-giris works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+  
+            <form class="box" [formGroup]="loginForm">
+                <h1>GİRİŞ YAP</h1>
+                <input type="email" placeholder="Sicil No"
+                    formControlName="loginNo">
+  
+                <input type="password" name="" placeholder="Şifre"
+                    formControlName="password">
+  
+                <input type="submit" name="" value="Giriş Yap" (click)="login()">
+            </form>
+        </div>
+    </div>
+  </div>
