@@ -12,7 +12,7 @@
     opacity: 0.80;
   }
   
-  .box input[type="email"],
+  .box input[type="number"],
   .box input[type="password"] {
     border: 0;
     background: none;
@@ -34,7 +34,7 @@
     font-weight: 500
   }
   
-  .box input[type="email"]:focus,
+  .box input[type="number"]:focus,
   .box input[type="password"]:focus {
     width: 350px;
     border-color: #98dde9
