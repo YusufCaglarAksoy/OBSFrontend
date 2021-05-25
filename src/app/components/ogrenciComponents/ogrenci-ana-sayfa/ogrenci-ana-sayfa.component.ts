@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LocalStorageService } from 'src/app/services/local-storage-service.service';
 
 @Component({
   selector: 'app-ogrenci-ana-sayfa',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OgrenciAnaSayfaComponent implements OnInit {
 
-  constructor() { }
+  constructor(private localStorageService:LocalStorageService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { 
+    this.getUser();
   }
 
+  getUser(){
+    return this.localStorageService.get('user')[0];
+  }
 }

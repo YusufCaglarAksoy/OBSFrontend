@@ -8,13 +8,43 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'ogrenciBilgiSistemi';
 
-  check(){
+  checkHomePage(){
     console.log(window.location.pathname)
     if(window.location.pathname==="/"||window.location.pathname==="/akademisyen/login"|| window.location.pathname==="/idareci/login"|| window.location.pathname==="/ogrenci/login"){
-      return false;
+      return true;
     }
     else{
-      return true
+      return false
+    }
+  }
+
+  checkIdareci(){
+    console.log(window.location.pathname)
+    if(window.location.pathname==="/"||window.location.pathname==="/akademisyen/login"|| window.location.pathname==="/idareci/login"|| window.location.pathname==="/ogrenci/login"){
+      return true;
+    }
+    else{
+      return false
+    }
+  }
+
+  checkAkademisyen(){
+    console.log(window.location.pathname)
+    if(window.location.pathname==="/"||window.location.pathname==="/akademisyen/login"|| window.location.pathname==="/idareci/login"|| window.location.pathname==="/ogrenci/login"){
+      return true;
+    }
+    else{
+      return false
+    }
+  }
+
+  checkOgrenci(){
+    console.log(window.location.pathname)
+    if(window.location.pathname==="/"||window.location.pathname==="/akademisyen/login"|| window.location.pathname==="/idareci/login"|| window.location.pathname==="/ogrenci/login"){
+      return true;
+    }
+    else{
+      return false
     }
   }
 }

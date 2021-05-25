@@ -37,7 +37,7 @@ export class IdareciGirisComponent implements OnInit {
       this.idareciService.login(loginModel).subscribe(response=>{
         this.toastrService.info("Giriş Başarılı")
         localStorage.setItem("token",response.data.token)
-        this.router.navigate([""])
+        this.router.navigate(["/idareci/anasayfa"])
       },responseError=>{
         this.toastrService.error('Hata','Kullanıcı Adı veya Şifre Geçersiz')
         return responseError.success

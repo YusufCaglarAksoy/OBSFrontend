@@ -2,7 +2,7 @@ export interface OgrenciDetayDto{
     isim : string
     soyad : string
     email :string
-    aders :string
+    adres :string
     kayitTarihi:Date
     telefonNumarasi:string
     unvanAdi:string

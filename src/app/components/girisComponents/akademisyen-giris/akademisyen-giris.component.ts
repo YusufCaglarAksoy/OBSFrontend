@@ -37,7 +37,7 @@ export class AkademisyenGirisComponent implements OnInit {
       this.akademisyenService.login(loginModel).subscribe(response=>{
         this.toastrService.info("Giriş Başarılı")
         localStorage.setItem("token",response.data.token)
-        this.router.navigate([""])
+        this.router.navigate(["/akademisyen/anasayfa"])
       },responseError=>{
         this.toastrService.error('Hata','Kullanıcı Adı veya Şifre Geçersiz')
         return responseError.success

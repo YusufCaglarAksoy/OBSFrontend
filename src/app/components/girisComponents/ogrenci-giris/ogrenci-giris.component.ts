@@ -37,7 +37,7 @@ export class OgrenciGirisComponent implements OnInit {
       this.ogrenciService.login(loginModel).subscribe(response=>{
         this.toastrService.info("Giriş Başarılı")
         localStorage.setItem("token",response.data.token)
-        this.router.navigate([""])
+        this.router.navigate(["/ogrenci/anasayfa"])
       },responseError=>{
         this.toastrService.error('Hata','Kullanıcı Adı veya Şifre Geçersiz')
         return responseError.success

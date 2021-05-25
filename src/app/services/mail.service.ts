@@ -31,10 +31,10 @@ export class MailService {
   getById(id:number):Observable<ListResponseModel<Mail>>{
     return this.httpClient.get<ListResponseModel<Mail>>(this.apiUrl+"GetById?id="+id);
   }
-  getByGonderenMail(mail:Mail):Observable<ListResponseModel<Mail>>{
+  getByGonderenMail(mail:string):Observable<ListResponseModel<Mail>>{
     return this.httpClient.get<ListResponseModel<Mail>>(this.apiUrl+"getByGonderenMail?email="+mail);
   }
-  getByAliciMail(mail:Mail):Observable<ListResponseModel<Mail>>{
+  getByAliciMail(mail:string):Observable<ListResponseModel<Mail>>{
     return this.httpClient.get<ListResponseModel<Mail>>(this.apiUrl+"getByAliciMail?email="+mail);
   }
 }

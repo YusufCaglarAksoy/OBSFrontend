@@ -3,7 +3,7 @@
   padding: 20px;
   position: relative;
   left: 65%;
-  background: #fffafb;
+  background: #191919;
   text-align: center;
   transition: 0.25s;
   margin-top: 200px;
@@ -22,13 +22,13 @@
   padding: 10px 10px;
   width: 280px;
   outline: none;
-  color: #9b1e48;
+  color: #ffffff;
   border-radius: 24px;
   transition: 0.25s
 }
 
 .box h1 {
-  color: #9b1e48;
+  color: #ffffff;
   text-transform: uppercase;
   font-weight: 500
 }
@@ -36,7 +36,7 @@
 .box input[type="number"]:focus,
 .box input[type="password"]:focus {
   width: 350px;
-  border-color: #9b1e48
+  border-color: #ffffff
 }
 
 .box input[type="submit"] {

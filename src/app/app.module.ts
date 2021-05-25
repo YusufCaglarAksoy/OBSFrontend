@@ -7,14 +7,15 @@ import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { AnaSayfaComponent } from './components/ana-sayfa/ana-sayfa.component';
-import { AkademisyenGirisComponent } from './components/akademisyen-giris/akademisyen-giris.component';
-import { IdareciGirisComponent } from './components/idareci-giris/idareci-giris.component';
 import { NavbarComponent } from './components/navbar/navbar.component'
 import { FormsModule, ReactiveFormsModule} from "@angular/forms"
-import { OgrenciGirisComponent } from './components/ogrenci-giris/ogrenci-giris.component';
-import { AkadamisyenAnasayfaComponent } from './components/akadamisyen-anasayfa/akadamisyen-anasayfa.component';
-import { IdareciAnasayfaComponent } from './components/idareci-anasayfa/idareci-anasayfa.component';
-import { OgrenciAnaSayfaComponent } from './components/ogrenci-ana-sayfa/ogrenci-ana-sayfa.component';
+import { OgrenciGirisComponent } from './components/girisComponents/ogrenci-giris/ogrenci-giris.component';
+import { AkadamisyenAnasayfaComponent } from './components/akademisyenComponents/akadamisyen-anasayfa/akadamisyen-anasayfa.component';
+import { IdareciAnasayfaComponent } from './components/idareciComponents/idareci-anasayfa/idareci-anasayfa.component';
+import { OgrenciAnaSayfaComponent } from './components/ogrenciComponents/ogrenci-ana-sayfa/ogrenci-ana-sayfa.component';
+import { AuthInterceptor } from './interceptros/auth.interceptor';
+import { AkademisyenGirisComponent } from './components/girisComponents/akademisyen-giris/akademisyen-giris.component';
+import { IdareciGirisComponent } from './components/girisComponents/idareci-giris/idareci-giris.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,7 @@ import { OgrenciAnaSayfaComponent } from './components/ogrenci-ana-sayfa/ogrenci
     NavbarComponent,
     AkadamisyenAnasayfaComponent,
     IdareciAnasayfaComponent,
-    OgrenciAnaSayfaComponent
+    OgrenciAnaSayfaComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +40,9 @@ import { OgrenciAnaSayfaComponent } from './components/ogrenci-ana-sayfa/ogrenci
       positionClass:"toast-bottom-right"
     })
   ],
-  providers: [],
+  providers: [
+    {provide:HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi:true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
