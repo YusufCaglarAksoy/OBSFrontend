@@ -5,6 +5,7 @@ import { AkademisyenDetayDto } from '../models/detayModels/akademisyenDetayDto';
 import { AkademisyenFotograf } from '../models/fotografModels/akademisyenFotograf';
 import { ListResponseModel } from '../models/responseModels/listResponseModel';
 import { ResponseModel } from '../models/responseModels/ResponseModel';
+import { SingleResponseModel } from '../models/responseModels/singleResponseModel';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,7 @@ import { ResponseModel } from '../models/responseModels/ResponseModel';
 export class AkademisyenFotografService {
   constructor(private httpClient : HttpClient) { }
 
-  apiUrl = 'https://localhost:44390/api/akademisyenFotograflar/'
+  apiUrl = 'https://localhost:44390/api/akademisyenlerFotograflar/'
 
   add( image : File , ogrenciId:number):Observable<ResponseModel> {
     const formData:FormData = new FormData();
@@ -36,11 +37,11 @@ export class AkademisyenFotografService {
     return this.httpClient.get<ListResponseModel<AkademisyenFotograf>>(this.apiUrl+"getall")
   }
 
-  getById(id : number):Observable<ListResponseModel<AkademisyenFotograf>> {
-    return this.httpClient.get<ListResponseModel<AkademisyenFotograf>>(this.apiUrl+"getbyid?id="+id)
+  getById(id : number):Observable<SingleResponseModel<AkademisyenFotograf>> {
+    return this.httpClient.get<SingleResponseModel<AkademisyenFotograf>>(this.apiUrl+"getbyid?id="+id)
   }
 
-  getByAkademisyenId(id : number):Observable<ListResponseModel<AkademisyenFotograf>> {
-    return this.httpClient.get<ListResponseModel<AkademisyenFotograf>>(this.apiUrl+"getbyakademisyenid?akademisyenId="+id)
+  getByAkademisyenId(id : number):Observable<SingleResponseModel<AkademisyenFotograf>> {
+    return this.httpClient.get<SingleResponseModel<AkademisyenFotograf>>(this.apiUrl+"getbyakademisyenid?akademisyenId="+id)
   }
 }

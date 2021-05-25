@@ -13,7 +13,7 @@ export class OgrenciFotografService {
 
   constructor(private httpClient : HttpClient) { }
 
-  apiUrl = 'https://localhost:44390/api/ogrencifotograflar/'
+  apiUrl = 'https://localhost:44390/api/ogrencilerfotograflar/'
 
   add( image : File , ogrenciId:number):Observable<ResponseModel> {
     const formData:FormData = new FormData();
@@ -37,11 +37,11 @@ export class OgrenciFotografService {
     return this.httpClient.get<ListResponseModel<OgrenciFotograf>>(this.apiUrl+"getall")
   }
 
-  getById(id : number):Observable<ListResponseModel<OgrenciFotograf>> {
-    return this.httpClient.get<ListResponseModel<OgrenciFotograf>>(this.apiUrl+"getbyid?id="+id)
+  getById(id : number):Observable<SingleResponseModel<OgrenciFotograf>> {
+    return this.httpClient.get<SingleResponseModel<OgrenciFotograf>>(this.apiUrl+"getbyid?id="+id)
   }
 
-  getByOgrenciId(id : number):Observable<ListResponseModel<OgrenciFotograf>> {
-    return this.httpClient.get<ListResponseModel<OgrenciFotograf>>(this.apiUrl+"getbyogrenciid?ogrenciId="+id)
+  getByOgrenciId(id : number):Observable<SingleResponseModel<OgrenciFotograf>> {
+    return this.httpClient.get<SingleResponseModel<OgrenciFotograf>>(this.apiUrl+"getbyogrenciid?ogrenciId="+id)
   }
 }

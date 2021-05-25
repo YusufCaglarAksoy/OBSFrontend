@@ -1,4 +1,5 @@
 export interface OgrenciDetayDto{
+    id:number
     isim : string
     soyad : string
     email :string

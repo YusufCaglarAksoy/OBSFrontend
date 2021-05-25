@@ -1,0 +1,20 @@
+
+.aw-zoom2
+{
+    position: relative;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    -ms-transition: all .3s ease-in;
+}
+
+.aw-zoom2:hover
+{
+    z-index:1;
+    -webkit-transform: scale(2);
+    -moz-transform: scale(1);
+    transform: scale(1.15);
+}

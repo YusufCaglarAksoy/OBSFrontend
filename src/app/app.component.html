@@ -1,19 +1,26 @@
 
-<div *ngIf="!checkAkademisyen()" >
-      <app-navbar></app-navbar>      
+<div *ngIf="checkHomePage()" >
+      <router-outlet></router-outlet>
+</div>
+<div *ngIf="checkOgrenciPage()" >
+      <body  class="ftco-cover-1 overlay innerpage"
+    style="background-image: url('https://i.hizliresim.com/kgxmabf.png'); background-size: 100% 90%; "  >
+      <app-ogrenci-navbar></app-ogrenci-navbar>      
       <div class="row">
             <div class="col-md-2">
-                  <app-sidebar></app-sidebar>
+                  <app-ogrenci-sidebar></app-ogrenci-sidebar>
             </div>
             <div class="col-md-10">
                   <router-outlet></router-outlet>
             </div>
       </div>
+      <div style="margin-top: 190px;">
+            --------------@aksoyTakımı--->YUSUF ÇAĞLAR AKSOY--->GİZEM UÇAR---->KADİR ŞEHMUS ARSLAN---->SERHAT KARCI---->FATİH ALICI----->TUNCAY FORMA---->MEHMET BERK GÜLŞEN---->FURKAN EMİR---->ALİ MERT BAKIR---->ÇAĞATAY UÇER--------------
+          </div>
+        </body>
 </div>
 
-<div *ngIf="checkHomePage()" >
-      <router-outlet></router-outlet>
-</div>
+
 
      
 

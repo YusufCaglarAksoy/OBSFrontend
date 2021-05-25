@@ -9,13 +9,15 @@ import { TokenModel } from '../models/kullaniciModels/RegisterModels/tokenModel'
 import { ListResponseModel } from '../models/responseModels/listResponseModel';
 import { ResponseModel } from '../models/responseModels/ResponseModel';
 import { SingleResponseModel } from '../models/responseModels/singleResponseModel';
+import { LocalStorageService } from './local-storage-service.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class OgrenciService {
   apiUrl = 'https://localhost:44390/api/ogrenciler/'
-  constructor(private httpClient :HttpClient) { }
+  constructor(private httpClient :HttpClient,
+              private localStorageService:LocalStorageService) { }
 
   add(ogrenci : OgrenciForRegisterDto):Observable<ResponseModel> {
     return this.httpClient.post<ResponseModel>(this.apiUrl+"add",ogrenci)
@@ -63,5 +65,14 @@ export class OgrenciService {
   
   getByEMail(email : string):Observable<ListResponseModel<OgrenciDetayDto>> {
     return this.httpClient.get<ListResponseModel<OgrenciDetayDto>>(this.apiUrl+"getbyemail?email="+email)
+  }
+
+  isAuthenticated(){
+    if(localStorage.getItem("token")){
+      return true;
+    }
+    else{
+      return false
+    }
   }
 }

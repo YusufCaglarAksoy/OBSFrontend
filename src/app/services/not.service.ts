@@ -13,7 +13,7 @@ export class NotService {
 
   constructor(private httpClient :HttpClient) { }
 
-  apiUrl = 'https://localhost:44390/api/harclar/'
+  apiUrl = 'https://localhost:44390/api/notlar/'
 
   add(not : Not):Observable<ResponseModel> {
     return this.httpClient.post<ResponseModel>(this.apiUrl+"add",not)
@@ -40,10 +40,10 @@ export class NotService {
   }
 
   getByOgrenciId(ogrenciId :number):Observable<ListResponseModel<NotDetayDto>> {
-    return this.httpClient.get<ListResponseModel<NotDetayDto>>(this.apiUrl+"getbyogrenciid?id="+ogrenciId)
+    return this.httpClient.get<ListResponseModel<NotDetayDto>>(this.apiUrl+"getbyogrenciid?ogrenciid="+ogrenciId)
   }
 
   getBySınavId(sinavId :number):Observable<ListResponseModel<NotDetayDto>> {
-    return this.httpClient.get<ListResponseModel<NotDetayDto>>(this.apiUrl+"getbysinavid?id="+sinavId)
+    return this.httpClient.get<ListResponseModel<NotDetayDto>>(this.apiUrl+"getbysinavid?sinavid="+sinavId)
   }
 }

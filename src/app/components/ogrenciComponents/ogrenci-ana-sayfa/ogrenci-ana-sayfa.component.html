@@ -1,1 +1,35 @@
-<p>{{getUser().isim}}</p>
+
+  <table  class="table table-dark table-hover" style="margin-top: 20px;">
+      <thead>
+          <tr>
+            <th scope="col">Araba Id</th>
+            <th scope="col">Model</th>
+            <th scope="col">Marka Id</th>
+            <th scope="col">Renk Id</th>
+            <th scope="col">Model Yılı</th>
+            <th scope="col">Günlük Ücret</th>
+            <th scope="col">Açıklama</th>
+            <th scope="col">Findeks Puanı</th>
+            <th>
+              <button type="button"  class="btn btn-success"   data-bs-target="#Ekle"> Ekle</button>
+            </th>
+          </tr>
+        </thead>
+  
+        <tbody *ngFor="let harc of harcs">
+          <tr >
+            <th >{{harc.ogrenciAdi}}</th>
+            <td>{{harc.ogrenciSoyadi}}</td>
+            <td>{{harc.ogrenciMail}}</td>
+            <td>{{harc.ogrenciNo}}</td>
+            <td>{{harc.donem}}</td>
+            <td>{{harc.tipi}}</td>
+            <td>{{harc.turu}}</td>
+            <td>{{harc.tutar}}</td>
+            <td><button type="button"  class="btn btn-danger"    data-bs-target="#Sil"> Sil</button>
+              <button type="button"  class="btn btn-success"   data-bs-target="#Guncelle"> Güncelle</button></td>
+  
+        </tr>
+    </tbody>
+    
+  </table>

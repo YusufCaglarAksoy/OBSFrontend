@@ -21,10 +21,7 @@ body {
     flex-shrink: 0;
     width: 1.5rem;
     height: 100vh;
-    background-color: #ffffff;
-    border: solid #ffffff;
-    border-width: 1px 0;
-    box-shadow: #ffffff;
+
   }
   
   .bi {
@@ -94,4 +91,6 @@ body {
 }
   .d-flex{
   background-color: #9b1e48;
+  box-shadow: inset 0.0em 0.0em 1.5em #9b1e48;
+
 }
