@@ -1,6 +1,7 @@
 export interface IdareciDetayDto{
+    id:number
     isim:string;
-    soyAd:string;
+    soyad:string;
     eMail:string;
     adres:string;
     kayitTarihi:Date;
@@ -8,4 +9,6 @@ export interface IdareciDetayDto{
     unvanAdi:string;
     fakulteAdi:string;
     sicilNo:number;
+    fakulteId:number
+    unvanId:number
 }

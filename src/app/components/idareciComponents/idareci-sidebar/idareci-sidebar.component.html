@@ -1,0 +1,43 @@
+<main >
+    <div class="d-flex flex-column wrapper flex-shrink-0 p-3 text-white bg-dark" style="width: 280px; opacity: 0.80;">
+      <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+          <button href="#" class="nav-link text-white align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#Genel-collapse" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+                <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
+              </svg>
+            Genel İşlemler
+          </button>
+          <div class="collapse" id="Genel-collapse">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small" style="margin-left: 10px;">
+              <li><a routerLink="/idareci/akademisyenListesi" class="link-dark rounded nav-link text-white">Akademisyen Listesi</a></li>
+              <li><a routerLink="/idareci/bolumListesi" class="link-dark rounded nav-link text-white">Bolüm Listesi</a></li>
+              <li><a routerLink="/idareci/dersListesi" class="link-dark rounded nav-link text-white">Ders Listesi</a></li>
+              <li><a routerLink="/idareci/ogrenciListesi" class="link-dark rounded nav-link text-white">OgrenciListesi</a></li>
+            </ul>
+          </div>
+        </li>
+
+          <li class="nav-item">
+            <button href="#" class="nav-link text-white align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#Kullanıcı-collapse" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"></path>
+                  </svg>
+              Kullanıcı İşlemleri
+            </button>
+            <div class="collapse" id="Kullanıcı-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small" style="margin-left: 10px;">
+                <li><a routerLink="/idareci/gelenMailler" class="link-dark rounded nav-link text-white">Gelen Mailler</a></li>
+                <li><a routerLink="/idareci/gonderilenMailler" class="link-dark rounded nav-link text-white">Gönderilen Mailler</a></li>
+                <li><a routerLink="/idareci/kullaniciBilgileri" class="link-dark rounded nav-link text-white">Kullanıcı Bilgilerim</a></li>
+                <li><a routerLink="/idareci/mailOlustur" class="link-dark rounded nav-link text-white">Mail oluştur</a></li>
+              </ul>
+            </div>
+          </li>
+      </ul>
+      <hr>
+    </div>
+  
+    <div class="b-example-divider"></div>
+  </main>

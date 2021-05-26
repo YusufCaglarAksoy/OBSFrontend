@@ -35,4 +35,33 @@ export class AppComponent {
     }
   }
 
+  checkIdareciPage(){
+    if(window.location.pathname==="/idareci/anasayfa"||window.location.pathname==="/idareci/akademisyenListesi"|| 
+       window.location.pathname==="/idareci/bolumListesi"|| window.location.pathname==="/idareci/dersListesi"||
+       window.location.pathname==="/idareci/ogrenciListesi"|| window.location.pathname==="/idareci/gelenMailler"||
+       window.location.pathname==="/idareci/gonderilenMailler"|| window.location.pathname==="/idareci/kullaniciBilgileri"||
+       window.location.pathname==="/idareci/mailOlustur"){
+      return true;
+    }
+    else{
+      return false
+    }
+  }
+
+  checkAkademisyenPage(){
+    if(window.location.pathname==="/akademisyen/anasayfa"||window.location.pathname==="/akademisyen/dersProgrami"|| 
+       window.location.pathname==="/akademisyen/genelBilgiler"|| window.location.pathname==="/akademisyen/ogrenciBilgileri"||
+       window.location.pathname==="/akademisyen/sinavTakvimi"|| window.location.pathname==="/akademisyen/sinifListe"||
+       window.location.pathname==="/akademisyen/devamsizlikGiris"|| window.location.pathname==="/akademisyen/notGiris"||
+       window.location.pathname==="/akademisyen/sinavGiris"|| window.location.pathname==="/akademisyen/dersKayitOnaylama"||
+       window.location.pathname==="/akademisyen/ogrenciListesi"|| window.location.pathname==="/akademisyen/gelenMailler"||
+       window.location.pathname==="/akademisyen/gonderilenMailler"|| window.location.pathname==="/akademisyen/kullaniciBilgileri"||
+       window.location.pathname==="/akademisyen/mailOlustur"){
+      return true;
+    }
+    else{
+      return false
+    }
+  }
+
 }

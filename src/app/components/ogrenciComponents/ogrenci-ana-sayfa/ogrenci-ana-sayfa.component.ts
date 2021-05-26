@@ -19,15 +19,7 @@ export class OgrenciAnaSayfaComponent implements OnInit {
               private harcService:HarcService) { }
 
   ngOnInit(): void { 
-    this.getUser();
+
   }
 
-  
-  getUser(){
-    this.ogrenciDetayDto = this.localStorageService.get('user')[0];
-      this.harcService.getByOgrenciId(1009).subscribe(response=>{
-        this.harcs = response.data
-      })
-      console.log
-  }
 }
