@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
     
-      <a href="http://www.firat.edu.tr/tr"><img  class="aw-zoom2" src="https://i.hizliresim.com/93o1xyu.png" href="http://www.firat.edu.tr/tr" style="margin-left: 20px;" alt="" width="240" height="60"></a>
+      <a routerLink="/ogrenci/anasayfa"><img  class="aw-zoom2" src="https://i.hizliresim.com/93o1xyu.png"  style="margin-left: 20px;" alt="" width="240" height="60"></a>
       
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -14,29 +14,24 @@
           <li class="nav-item">
             <a class="nav-link" ></a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link "  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" ></a></li>
-              <li><a class="dropdown-item" > </a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" ></a></li>
-            </ul>
-          </li>
+
           <li class="nav-item">
             <a class="nav-link disabled"  tabindex="-1" aria-disabled="true"></a>
           </li>
         </ul>
-        <form class="d-flex dropdown">
+        <form class="d-flex dropdown" style="margin-right: 68px;">
           
-          <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <th class="nav-link"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" style="margin-top: 2px; margin-left: 10px; color: rgb(255, 255, 255);">
             {{ ogrenciDetayDto.isim }} {{ ogrenciDetayDto.soyad }}
-          </a>
-          <img src="{{fotografYolu}}" style="margin-left: 20px;" alt="" width="35" height="50">
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <tr> {{ ogrenciDetayDto.isim }} {{ ogrenciDetayDto.soyad }}</tr>
+          </th>
+          <img class="image"src="{{getUserPhoto()}}" style="margin-left: 5px;" alt="" width="35" height="45">
+          <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+            <img class="background-image" src="{{getUserPhoto()}}" style="margin-left: 56px;" alt="" width="70" height="90">
+            <div class="box">{{ ogrenciDetayDto.ogrenciNo }}<br /> {{ ogrenciDetayDto.isim }} {{ ogrenciDetayDto.soyad }} <br /> {{ ogrenciDetayDto.bolumAdi }}</div>
+            <div class="d-flex" style="margin-top: 4px;">
+              <button class="btn btn-success" routerLink="ogrenci/kullaniciBilgileri">Profilim </button>
+              <button class="btn btn-danger" (click)="logout()">Çıkış Yap</button>
+            </div>
           </ul>
         </form>
       </div>

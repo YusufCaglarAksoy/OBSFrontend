@@ -18,6 +18,10 @@ export class OgrenciLoginGuard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
       if(this.localStorageService.get('user')[0].unvanId===1){
         return true;
+      }else if(!this.localStorageService.get('user')){
+        this.router.navigate(["ogrenci/login"])
+        this.toastrService.error("Sisteme giriş yapmalısınız")
+        return false;
       }else{
         this.router.navigate(["ogrenci/login"])
         this.toastrService.info("Sisteme öğrenci girişi yapmalısınız")

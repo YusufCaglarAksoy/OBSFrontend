@@ -1,9 +1,7 @@
+
 .aw-zoom2
 {
     position: relative;
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    -moz-transform: scale(1);
     transition: all .3s ease-in;
     -moz-transition: all .3s ease-in;
     -webkit-transition: all .3s ease-in;
@@ -16,4 +14,54 @@
     -webkit-transform: scale(2);
     -moz-transform: scale(1);
     transform: scale(1.15);
+}
+.dropdown-menu{
+    color: rgb(255, 255, 255);
+    width: 230px;
+    padding: 20px;
+    background: #9b1e48;
+    background-image: url('https://i.hizliresim.com/hap5fcb.png') ;
+    background-size: 100%;
+    background-repeat:no-repeat; 
+    background-position: 100%;   
+    border-radius: 20px;
+    border: 1px solid white ;
+}
+
+.dropdown-menu .background-image{
+    border-radius: 37px;
+    border: 3px solid #212529;
+}
+
+.dropdown-menu .box{
+    position: relative;
+    width: 190px;
+    padding: 8px;
+    background: #212529 ;
+    text-align: center;
+    border-radius: 30px;
+    opacity: 0.90;
+
+}
+
+.dropdown-menu .btn{
+    border: 2px solid #000000;
+    outline: none;
+    color: rgb(255, 255, 255);
+    border-radius: 24px;
+    transition: 0.25s;
+    margin-left: 7px;
+    cursor: pointer;
+    
+}
+
+.dropdown{
+    background-color: #9b1e48;
+    border-radius: 24px;
+    text-align: center;
+}
+
+.dropdown .image{
+    border-radius: 30px;
+    border: 3px solid #212529;
 }

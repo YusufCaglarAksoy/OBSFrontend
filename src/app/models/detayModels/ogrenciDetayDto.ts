@@ -23,4 +23,5 @@ export interface OgrenciDetayDto{
     danismanEMail:string
     danismanTelefonNumarasi:string
     danismanUnvanAdi:string 
+    fotografYolu:string
 }

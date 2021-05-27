@@ -19,6 +19,10 @@ export class IdareciLoginGuard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
       if(this.localStorageService.get('user')[0].unvanId===5||this.localStorageService.get('user')[0].unvanId===7||this.localStorageService.get('user')[0].unvanId===6){
         return true;
+      }else if(!this.localStorageService.get('user')){
+        this.router.navigate(["idareci/login"])
+        this.toastrService.error("Sisteme giriş yapmalısınız")
+        return false;
       }else{
         this.router.navigate(["idareci/login"])
         this.toastrService.info("Sisteme idareci girişi yapmalısınız")

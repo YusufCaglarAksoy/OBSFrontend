@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AkademisyenDetayDto } from 'src/app/models/detayModels/akademisyenDetayDto';
 import { AkademisyenFotograf } from 'src/app/models/fotografModels/akademisyenFotograf';
 import { AkademisyenFotografService } from 'src/app/services/akademisyen-fotograf.service';
@@ -10,18 +11,14 @@ import { LocalStorageService } from 'src/app/services/local-storage-service.serv
   styleUrls: ['./akademisyen-navbar.component.css']
 })
 export class AkademisyenNavbarComponent implements OnInit {
-  akademistenFotograf:AkademisyenFotograf={
-    akademisyenId:2008,
-    id:1002,
-    fotografYolu:"0f68acc2-e5e9-45b1-a2b0-3d64288d03f5_5_18_2021.jpg",
-    tarih : new Date("2021-05-25")
-  }
+
   akademisyenDetayDto:AkademisyenDetayDto
   apiUrl:string="https://localhost:44390/images/"
   fotografYolu:string
+  toastrService: any;
 
   constructor(private localStorageService:LocalStorageService,
-              private akademisyenFotografService:AkademisyenFotografService) { }
+              private router:Router) { }
 
   ngOnInit(): void { 
     this.getUser()
@@ -30,14 +27,22 @@ export class AkademisyenNavbarComponent implements OnInit {
 
   getUser(){
     this.akademisyenDetayDto = this.localStorageService.get('user')[0];
-    this.akademisyenFotografService.getByAkademisyenId(this.akademisyenDetayDto.id).subscribe(response=>{
-      this.akademistenFotograf= response.data
-    })
-    if(this.akademistenFotograf===null){
-      this.fotografYolu = "https://i.hizliresim.com/hap5fcb.png"
+    
+  }
+
+  getUserPhoto(){
+    if(!this.akademisyenDetayDto.fotografYolu){
+      return "https://i.hizliresim.com/hap5fcb.png"
     }
     else{
-      this.fotografYolu = this.apiUrl+"ogrenci/"+this.akademistenFotograf.fotografYolu
+      return this.apiUrl+"akademisyen/"+this.akademisyenDetayDto.fotografYolu
     }  
+  }
+
+  logout(){
+    this.localStorageService.remove("token")
+    this.localStorageService.remove("user")
+    this.router.navigate(["/"])
+    this.toastrService.success("Çıkış yapıldı")
   }
 }

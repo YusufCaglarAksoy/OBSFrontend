@@ -10,4 +10,5 @@ export interface NotDetayDto{
     ogrenciSoyadi : string
     ogrenciNo : number
     sinavNot : number
+
 }

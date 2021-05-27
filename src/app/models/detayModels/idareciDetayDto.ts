@@ -11,4 +11,5 @@ export interface IdareciDetayDto{
     sicilNo:number;
     fakulteId:number
     unvanId:number
+    fotografYolu:string
 }

@@ -32,7 +32,7 @@ export class NotService {
   }
 
   getDetails():Observable<ListResponseModel<NotDetayDto>> {
-    return this.httpClient.get<ListResponseModel<NotDetayDto>>(this.apiUrl+"getnotDetaylari")
+    return this.httpClient.get<ListResponseModel<NotDetayDto>>(this.apiUrl+"getnotlardetaylari")
   }
 
   getById(id : number):Observable<ListResponseModel<NotDetayDto>> {

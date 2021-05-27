@@ -54,7 +54,7 @@ const routes: Routes = [
   {path:"akademisyen/login",component:AkademisyenGirisComponent},
   {path:"idareci/login",component:IdareciGirisComponent},
 
-  {path:"ogrenci/anasayfa",component:OgrenciAnaSayfaComponent},
+  {path:"ogrenci/anasayfa",component:OgrenciAnaSayfaComponent,canActivate:[OgrenciLoginGuard]},
   {path:"ogrenci/dersKayit",component:OgrenciDersKayitComponent,canActivate:[OgrenciLoginGuard]},
   {path:"ogrenci/devamsizlikDurumu",component:OgrenciDevamsizlikDurumuComponent,canActivate:[OgrenciLoginGuard]},
   {path:"ogrenci/harcBilgileri",component:OgrenciHarcBilgileriComponent,canActivate:[OgrenciLoginGuard]},
@@ -96,9 +96,6 @@ const routes: Routes = [
   {path:"akademisyen/gonderilenMailler",component:AkademisyenGonderilenMaillerComponent,canActivate:[AkademisyenLoginGuard]},
   {path:"akademisyen/kullaniciBilgier",component:AkademisyenKullaniciBilgileriComponent,canActivate:[AkademisyenLoginGuard]},
   {path:"akademisyen/mailOlustur",component:AkademisyenMailOlusturComponent,canActivate:[AkademisyenLoginGuard]},
-
-
-
 ];
 
 @NgModule({

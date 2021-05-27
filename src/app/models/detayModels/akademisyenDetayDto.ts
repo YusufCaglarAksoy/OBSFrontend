@@ -14,4 +14,5 @@ export interface AkademisyenDetayDto{
     bolumAdi:string
     bolumId:number
     sicilNo:number
+    fotografYolu:string
 }

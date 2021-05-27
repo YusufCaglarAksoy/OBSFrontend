@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ana-sayfa.component.css']
 })
 export class AnaSayfaComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  reload(){
+
+  }
 }

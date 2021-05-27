@@ -19,6 +19,10 @@ export class AkademisyenLoginGuard implements CanActivate {
       if(this.localStorageService.get('user')[0].unvanId===2||this.localStorageService.get('user')[0].unvanId===3||
          this.localStorageService.get('user')[0].unvanId===4||this.localStorageService.get('user')[0].unvanId===8){
         return true;
+      }else if(!this.localStorageService.get('user')){
+        this.router.navigate(["akademisyen/login"])
+        this.toastrService.error("Sisteme giriş yapmalısınız")
+        return false;
       }else{
         this.router.navigate(["akademisyen/login"])
         this.toastrService.info("Sisteme akademisyen girişi yapmalısınız")
