@@ -1,0 +1,16 @@
+<table class="table table-dark table-hover">
+
+    <tbody *ngFor="let ogrenci of ogrenciler">
+      <tr>
+        <th>{{ogrenci.isim}}</th>
+        <td>{{ogrenci.soyad}}</td>
+        <td>{{ogrenci.email}}</td>
+        <td>{{ogrenci.ogrenciNo}}</td>
+        <td>
+          <button type="button" class="btn btn-danger" data-bs-target="#Sil"> Sil</button>
+          <button type="button" class="btn btn-success" data-bs-target="#Guncelle"> Güncelle</button>
+        </td>
+      </tr>
+    </tbody>
+  
+  </table>

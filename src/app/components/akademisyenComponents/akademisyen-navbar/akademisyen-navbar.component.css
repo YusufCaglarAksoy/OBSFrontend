@@ -55,6 +55,12 @@
     
 }
 
+.navbar{
+    position: fixed;
+    width: 100%;
+}
+
+
 .dropdown{
     background-color: #9b1e48;
     border-radius: 24px;

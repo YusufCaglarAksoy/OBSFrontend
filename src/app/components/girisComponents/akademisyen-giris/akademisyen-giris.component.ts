@@ -35,7 +35,7 @@ export class AkademisyenGirisComponent implements OnInit {
       let loginModel = Object.assign({},this.loginForm.value)
 
       this.akademisyenService.login(loginModel).subscribe(response=>{
-        this.toastrService.info("Giriş Başarılı")
+        this.toastrService.success("Giriş Başarılı")
         localStorage.setItem("token",response.data.token)
         this.router.navigate(["/akademisyen/anasayfa"])
       },responseError=>{

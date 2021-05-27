@@ -41,4 +41,8 @@ export class DersService {
   getByDersKodu(derskodu :String):Observable<ListResponseModel<DersDetayDto>> {
     return this.httpClient.get<ListResponseModel<DersDetayDto>>(this.apiUrl+"getbyderskodu?dersKodu="+derskodu)
   }
+
+  getByDonemId(id : number):Observable<ListResponseModel<DersDetayDto>> {
+    return this.httpClient.get<ListResponseModel<DersDetayDto>>(this.apiUrl+"getbydonemid?donemid="+id)
+  }
 }

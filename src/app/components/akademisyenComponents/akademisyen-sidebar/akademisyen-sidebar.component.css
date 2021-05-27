@@ -13,8 +13,8 @@ body {
     height: 100vh;
     height: -webkit-fill-available;
     max-height: 100vh;
-    overflow-x: auto;
-    overflow-y: hidden;
+    position: fixed;
+    margin-top: 4%;
   }
   
   .b-example-divider {

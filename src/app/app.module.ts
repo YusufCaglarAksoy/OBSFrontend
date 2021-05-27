@@ -57,6 +57,7 @@ import { AkademisyenGonderilenMaillerComponent } from './components/akademisyenC
 import { AkademisyenKullaniciBilgileriComponent } from './components/akademisyenComponents/kullaniciislemleri/akademisyen-kullanici-bilgileri/akademisyen-kullanici-bilgileri.component';
 import { AkademisyenMailOlusturComponent } from './components/akademisyenComponents/kullaniciislemleri/akademisyen-mail-olustur/akademisyen-mail-olustur.component';
 import { AkademisyenNavbarComponent } from './components/akademisyenComponents/akademisyen-navbar/akademisyen-navbar.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -111,6 +112,7 @@ import { AkademisyenNavbarComponent } from './components/akademisyenComponents/a
     AkademisyenKullaniciBilgileriComponent,
     AkademisyenMailOlusturComponent,
     AkademisyenNavbarComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

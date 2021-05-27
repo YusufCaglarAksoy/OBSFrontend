@@ -3,57 +3,57 @@
       <router-outlet></router-outlet>
 </div>
 <div *ngIf="checkOgrenciPage()" >
-      <body  class="ftco-cover-1 overlay innerpage"
-    style="background-image: url('https://i.hizliresim.com/kgxmabf.png'); background-size: 100% 90%; "  >
-      <app-ogrenci-navbar></app-ogrenci-navbar>      
-      <div class="row">
-            <div class="col-md-2">
-                  <app-ogrenci-sidebar></app-ogrenci-sidebar>
+      <body  class="ftco-cover-1 overlay innerpage" style="background-image: url('https://i.hizliresim.com/kgxmabf.png'); background-size: 100% 100%; "  >
+    
+            <app-ogrenci-navbar></app-ogrenci-navbar>      
+            <div class="row">
+                  <div class="sidebar">
+                        <app-ogrenci-sidebar></app-ogrenci-sidebar>
+                  </div>
+                  <div class="content">
+                        <router-outlet></router-outlet>
+                  </div>
             </div>
-            <div class="col-md-10">
-                  <router-outlet></router-outlet>
+            <div style="margin-top: 820px;">
+                  <app-footer></app-footer>
             </div>
-      </div>
-      <div style="margin-top: 190px;">
-            @aksoyTakımı--->GİZEM UÇAR--->YUSUF ÇAĞLAR AKSOY---->KADİR ŞEHMUS ARSLAN---->SERHAT KARCI---->FATİH ALICI----->TUNCAY FORMA---->MEHMET BERK GÜLŞEN---->FURKAN EMİR---->ALİ MERT BAKIR---->ÇAĞATAY UÇER
-          </div>
-        </body>
+            </body>
 </div>
 
 <div *ngIf="checkIdareciPage()" >
-      <body  class="ftco-cover-1 overlay innerpage"
-    style="background-image: url('https://i.hizliresim.com/kgxmabf.png'); background-size: 100% 90%; "  >
-      <app-idareci-navbar></app-idareci-navbar>      
-      <div class="row">
-            <div class="col-md-2">
-                  <app-idareci-sidebar></app-idareci-sidebar>
+      <body  class="ftco-cover-1 overlay innerpage" style="background-image: url('https://i.hizliresim.com/kgxmabf.png'); background-size: 100% 100%; "  >
+    
+            <app-idareci-navbar></app-idareci-navbar>      
+            <div class="row">
+                  <div class="sidebar">
+                        <app-idareci-sidebar></app-idareci-sidebar>
+                  </div>
+                  <div class="content">
+                        <router-outlet></router-outlet>
+                  </div>
             </div>
-            <div class="col-md-10">
-                  <router-outlet></router-outlet>
+            <div style="margin-top: 820px;">
+                  <app-footer></app-footer>
             </div>
-      </div>
-      <div style="margin-top: 190px;">
-            @aksoyTakımı--->GİZEM UÇAR--->YUSUF ÇAĞLAR AKSOY---->KADİR ŞEHMUS ARSLAN---->SERHAT KARCI---->FATİH ALICI----->TUNCAY FORMA---->MEHMET BERK GÜLŞEN---->FURKAN EMİR---->ALİ MERT BAKIR---->ÇAĞATAY UÇER
-          </div>
-        </body>
+            </body>
 </div>
 
 <div *ngIf="checkAkademisyenPage()" >
-      <body  class="ftco-cover-1 overlay innerpage"
-    style="background-image: url('https://i.hizliresim.com/kgxmabf.png'); background-size: 100% 90%; "  >
-      <app-akademisyen-navbar></app-akademisyen-navbar>      
-      <div class="row">
-            <div class="col-md-2">
-                  <app-akademisyen-sidebar></app-akademisyen-sidebar>
+      <body  class="ftco-cover-1 overlay innerpage" style="background-image: url('https://i.hizliresim.com/kgxmabf.png'); background-size: 100% 100%; "  >
+    
+            <app-akademisyen-navbar></app-akademisyen-navbar>      
+            <div class="row">
+                  <div class="sidebar">
+                        <app-akademisyen-sidebar></app-akademisyen-sidebar>
+                  </div>
+                  <div class="content">
+                        <router-outlet></router-outlet>
+                  </div>
             </div>
-            <div class="col-md-10">
-                  <router-outlet></router-outlet>
+            <div style="margin-top: 820px;">
+                  <app-footer></app-footer>
             </div>
-      </div>
-      <div style="margin-top: 190px;">
-            @aksoyTakımı--->GİZEM UÇAR--->YUSUF ÇAĞLAR AKSOY---->KADİR ŞEHMUS ARSLAN---->SERHAT KARCI---->FATİH ALICI----->TUNCAY FORMA---->MEHMET BERK GÜLŞEN---->FURKAN EMİR---->ALİ MERT BAKIR---->ÇAĞATAY UÇER
-          </div>
-        </body>
+            </body>
 </div>
 
 

@@ -15,6 +15,13 @@
     -moz-transform: scale(1);
     transform: scale(1.15);
 }
+
+.navbar{
+    position: fixed;
+    width: 100%;
+}
+
+
 .dropdown-menu{
     color: rgb(255, 255, 255);
     width: 230px;

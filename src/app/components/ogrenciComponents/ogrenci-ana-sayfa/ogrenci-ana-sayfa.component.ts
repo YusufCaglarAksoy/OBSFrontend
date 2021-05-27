@@ -5,6 +5,7 @@ import { OgrenciDetayDto } from 'src/app/models/detayModels/ogrenciDetayDto';
 import { HarcService } from 'src/app/services/harc.service';
 import { LocalStorageService } from 'src/app/services/local-storage-service.service';
 import { NotService } from 'src/app/services/not.service';
+import { OgrenciService } from 'src/app/services/ogrenci.service';
 
 @Component({
   selector: 'app-ogrenci-ana-sayfa',
@@ -13,13 +14,17 @@ import { NotService } from 'src/app/services/not.service';
 })
 export class OgrenciAnaSayfaComponent implements OnInit {
 
-  ogrenciDetayDto:OgrenciDetayDto
-  harcs:HarcDetayDto[]
+  ogrenciler:OgrenciDetayDto[]
   constructor(private localStorageService:LocalStorageService,
-              private harcService:HarcService) { }
+              private ogrenciService:OgrenciService) { }
 
   ngOnInit(): void { 
-
+    this.getOgrenciler()
   }
 
+  getOgrenciler(){
+    this.ogrenciService.getDetails().subscribe(respon=>{
+      this.ogrenciler = respon.data
+    })
+  }
 }
