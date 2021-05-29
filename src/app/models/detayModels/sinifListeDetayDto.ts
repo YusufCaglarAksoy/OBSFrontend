@@ -1,4 +1,5 @@
 export interface SinifListeDetayDto{
+    subeId:number
     ogretmenAdi:string;
     ogretmenSoyadi:string;
     ogretmenMail:string;

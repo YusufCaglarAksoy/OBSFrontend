@@ -1,1 +1,132 @@
-<p>ogrenci-ders-kayit works!</p>
+<button type="button" class="btn" data-bs-target="#Ekle" data-bs-toggle="modal"> Ekle</button>
+
+<table  class="table table-dark table-hover" style="margin-top: 20px;">
+  <thead>
+      <tr>
+        <th scope="col">Ders Kodu</th>
+        <th scope="col">Ders Adi</th>
+        <th scope="col">Sinif</th>
+      </tr>
+    </thead>
+    <tbody >
+      <tr >
+        <th>{{eklenen1.dersKodu}}</th>
+        <th>{{eklenen1.dersAdi}}</th>
+        <th>{{eklenen1.sinif}}</th>
+      </tr>
+      <tr >
+        <th>{{eklenen2.dersKodu}}</th>
+        <th>{{eklenen2.dersAdi}}</th>
+        <th>{{eklenen2.sinif}}</th>
+      </tr>
+      <tr >
+        <th>{{eklenen3.dersKodu}}</th>
+        <th>{{eklenen3.dersAdi}}</th>
+        <th>{{eklenen3.sinif}}</th>
+      </tr>
+      <tr >
+        <th>{{eklenen4.dersKodu}}</th>
+        <th>{{eklenen4.dersAdi}}</th>
+        <th>{{eklenen4.sinif}}</th>
+      </tr>
+      <tr >
+        <th>{{eklenen5.dersKodu}}</th>
+        <th>{{eklenen5.dersAdi}}</th>
+        <th>{{eklenen5.sinif}}</th>
+      </tr>
+      <tr >
+        <th>{{eklenen6.dersKodu}}</th>
+        <th>{{eklenen6.dersAdi}}</th>
+        <th>{{eklenen6.sinif}}</th>
+      </tr>
+      <tr >
+        <th>{{eklenen7.dersKodu}}</th>
+        <th>{{eklenen7.dersAdi}}</th>
+        <th>{{eklenen7.sinif}}</th>
+      </tr>
+      <tr >
+        <th>{{eklenen8.dersKodu}}</th>
+        <th>{{eklenen8.dersAdi}}</th>
+        <th>{{eklenen8.sinif}}</th>
+      </tr>
+      <tr >
+        <th>{{eklenen9.dersKodu}}</th>
+        <th>{{eklenen9.dersAdi}}</th>
+        <th>{{eklenen9.sinif}}</th>
+      </tr>
+      <tr >
+        <th>{{eklenen10.dersKodu}}</th>
+        <th>{{eklenen10.dersAdi}}</th>
+        <th>{{eklenen10.sinif}}</th>
+      </tr>
+</tbody>
+</table>
+
+
+<div  class="modal fade" id="Ekle" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content ">
+      <div class="modal-header">
+        <h5 class="modal-title">Akademisyen Güncelle</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+        <div class="col-md-4">
+          <select   [(ngModel)]="ders1">
+            <option type="number" *ngFor="let ders of dersler" value="{{ders.id}}" >{{ders.dersAdi}}</option>
+          </select>
+      </div>
+      <div class="col-md-4">
+        <select   [(ngModel)]="ders2">
+          <option type="number" *ngFor="let ders of dersler" value="{{ders.id}}" >{{ders.dersAdi}}</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <select   [(ngModel)]="ders3">
+          <option type="number" *ngFor="let ders of dersler" value="{{ders.id}}" >{{ders.dersAdi}}</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <select   [(ngModel)]="ders4">
+          <option type="number" *ngFor="let ders of dersler" value="{{ders.id}}" >{{ders.dersAdi}}</option>
+        </select>
+      </div>
+      <div class="col-md-4"></div>
+        <select   [(ngModel)]="ders5">
+          <option type="number" *ngFor="let ders of dersler" value="{{ders.id}}" >{{ders.dersAdi}}</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <select   [(ngModel)]="ders6">
+          <option type="number" *ngFor="let ders of dersler" value="{{ders.id}}" >{{ders.dersAdi}}</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <select   [(ngModel)]="ders7">
+          <option type="number" *ngFor="let ders of dersler" value="{{ders.id}}" >{{ders.dersAdi}}</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <select   [(ngModel)]="ders8">
+          <option type="number" *ngFor="let ders of dersler" value="{{ders.id}}" >{{ders.dersAdi}}</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <select   [(ngModel)]="ders9">
+          <option type="number" *ngFor="let ders of dersler" value="{{ders.id}}" >{{ders.dersAdi}}</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <select   [(ngModel)]="ders10">
+          <option type="number" *ngFor="let ders of dersler" value="{{ders.id}}" >{{ders.dersAdi}}</option>
+        </select>
+      </div>
+    </div>  
+    <div class="modal-footer">
+      <button type="button" routerLink="/ogrenci/dersKayıt" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
+      <button type="button"  class="btn btn-success"  (click)="add()" data-bs-toogle="modal"> Kaydet</button> 
+  </div>
+      
+  </div>
+</div>

@@ -2,7 +2,7 @@ export interface OgrenciDetayDto{
     id:number
     isim : string
     soyad : string
-    email :string
+    eMail :string
     adres :string
     kayitTarihi:Date
     telefonNumarasi:string
@@ -12,7 +12,7 @@ export interface OgrenciDetayDto{
     fakulteAdi:string
     aileAdres:string
     aileTelefon:string
-    bankAdi:string
+    bankaAdi:string
     subeAdi:string
     subeKodu:number
     hesapNumarasi:string 
@@ -24,4 +24,6 @@ export interface OgrenciDetayDto{
     danismanTelefonNumarasi:string
     danismanUnvanAdi:string 
     fotografYolu:string
+    bolumId:number
+    danismanId:number
 }

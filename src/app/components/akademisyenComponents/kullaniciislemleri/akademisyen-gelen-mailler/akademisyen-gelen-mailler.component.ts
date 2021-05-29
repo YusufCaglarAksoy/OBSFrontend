@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
+import { AkademisyenDetayDto } from 'src/app/models/detayModels/akademisyenDetayDto';
+import { Mail } from 'src/app/models/mail';
+import { LocalStorageService } from 'src/app/services/local-storage-service.service';
+import { MailService } from 'src/app/services/mail.service';
 
 @Component({
   selector: 'app-akademisyen-gelen-mailler',
@@ -6,10 +11,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./akademisyen-gelen-mailler.component.css']
 })
 export class AkademisyenGelenMaillerComponent implements OnInit {
+  mails:Mail[]
+  akademisyenDetayDto:AkademisyenDetayDto
+  currentId: number;
 
-  constructor() { }
+  constructor(
+    private localStorageService:LocalStorageService,
+    private mailService:MailService,
+    private toastrService:ToastrService) { }
 
   ngOnInit(): void {
+    this.getUser();
   }
+  getUser() {
+    this.akademisyenDetayDto=this.localStorageService.get('user')[0]
+    this.mailService.getByAliciMail(this.akademisyenDetayDto.eMail).subscribe(resoponse =>{
+    this.mails=resoponse.data
 
+    })
+  }
+  mailId(id:number){
+    this.currentId=id
+  }
+  delete() {
+    this.mailService.delete(this.currentId).subscribe(response=>{
+    this.toastrService.success("mail silindi")
+    })
+  }
 }

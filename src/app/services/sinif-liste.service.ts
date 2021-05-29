@@ -10,7 +10,7 @@ import { SinifListe } from '../models/sinifListe';
   providedIn: 'root'
 })
 export class SinifListeService {
-  apiUrl = 'https://localhost:44390/api/mufredatlar/'
+  apiUrl = 'https://localhost:44390/api/sinifListeler/'
   constructor(private httpClient:HttpClient) { }
 
   add(SinifListe: SinifListe):Observable<ResponseModel>{
@@ -33,8 +33,8 @@ export class SinifListeService {
   getByOgrenciId(ogrenciId:number):Observable<ListResponseModel<SinifListeDetayDto>>{
     return this.httpClient.get<ListResponseModel<SinifListeDetayDto>>(this.apiUrl+"GetByOgrenciId?ogrenciid="+ogrenciId);
   }
-  getBySubeiId(subeId:number):Observable<ListResponseModel<SinifListeDetayDto>>{
-    return this.httpClient.get<ListResponseModel<SinifListeDetayDto>>(this.apiUrl+"GetBySubeId?subeid="+subeId);
+  getBySubeId(subeId:number):Observable<ListResponseModel<SinifListeDetayDto>>{
+    return this.httpClient.get<ListResponseModel<SinifListeDetayDto>>(this.apiUrl+"getbysubeiid?subeid="+subeId);
   }
   getSinifListeDetaylari():Observable<ListResponseModel<SinifListeDetayDto>>{
     return this.httpClient.get<ListResponseModel<SinifListeDetayDto>>(this.apiUrl+"getSinifListesiDetaylari");

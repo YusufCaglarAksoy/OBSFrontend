@@ -1,1 +1,43 @@
-<p>ogrenci-not-listesi works!</p>
+<div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-11">
+      <div class="row">
+        <div class="col-md-2">
+          <form >
+            <mat-form-field appearance="fill">
+              <mat-label id="renk">Donem Seçiniz</mat-label>
+              <mat-select [(ngModel)]="selectedDonem" name="donem">
+                <mat-option *ngFor="let donem of donemAdlari" [value]="donem" (click) = listeyiGetir()>
+                  {{donem}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </form>
+        </div>
+      </div>
+      <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+      <table  class="table table-dark table-hover" style="margin-top: 20px;">
+        <thead>
+            <tr>
+              <th scope="col">Ders</th>
+              <th scope="col">Dönem</th>
+              <th scope="col">Vize</th>
+              <th scope="col">Final</th>
+              <th scope="col">Bütünleme</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let not of notsVize; index as i">
+            <tr >
+              <th>{{not.dersAdi}}</th>
+              <th>{{not.donemAdi}}</th>
+              <th>{{not.sinavNot}}</th>
+              <th>{{notsFinal[i].sinavNot}}</th>
+              <th>{{notsButunleme[i].sinavNot}}</th>
+          </tr>
+      </tbody>
+      </table>
+  
+    </div>
+  </div>
+  

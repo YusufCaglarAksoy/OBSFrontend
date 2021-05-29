@@ -1,1 +1,42 @@
-<p>akademisyen-sinav-giris works!</p>
+<div class="card1" style="width: 75rem; margin-left: 30px;">
+  <div class="card-body">
+  <div class="row">
+  <div class="col-md-1">
+
+  </div>
+  <div class="col-md-11">
+    <div class="row">
+      <h3 id="renk">Sınav Ekle</h3>
+      <div class="col-md-4">
+        <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+        <select class="form-select" id="dersGiris" [(ngModel)]="selectedSube">
+          <option selected>Ders</option>
+          <option value="1" *ngFor="let sube of subeler" [value]="sube.dersAdi">{{sube.dersAdi}}</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+        <select class="form-select" id="sinavTuruGiris" [(ngModel)]="selectedSinavTur">
+          <option selected>Sınav Türü</option>
+          <option value="1" [value]=1 >Vize</option>
+          <option value="2" [value]=2 >Final</option>
+          <option value="3" [value]=3 >Bütünleme</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group row">
+          <label for="example-datetime-local-input" class="col-1 col-form-label" id="renk">Tarih:</label>
+          <div class="col-8">
+            <input class="form-control" [(ngModel)]="selectedDate" (click) = 'getDers()'  type="datetime-local" value="2021-08-19T13:45:00" id="example-datetime-local-input" [value]="selectedDate">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <br>
+      <button type="button" (click) = 'sinavEkleFunction()' class="btn btn-primary">Ekle</button>
+    </div>
+  </div>
+</div>    
+  </div>
+</div>

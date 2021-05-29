@@ -1,1 +1,125 @@
-<p>idareci-ders-listesi works!</p>
+<table class="table table-dark table-hover" style="margin-top: 20px;">
+
+    <thead>
+      <tr class="table-active">
+          <th>Ders Adı</th>
+          <th>Ders Kodu</th>
+          <th>Dönem Adı</th>
+          <th>Sınıf</th>
+          <th>Bölüm Adı</th>
+          <th>Fakülte Adı</th>
+          <th>Sil</th>
+          <th>Güncelle</th>  
+        </tr>
+    </thead>
+  
+    <tbody *ngFor="let ders of dersler">
+      <tr>
+        <th>{{ders.dersAdi}}</th>
+        <td>{{ders.dersKodu}}</td>
+        <td>{{ders.donemAdi}}</td>
+        <td>{{ders.sinif}}</td>
+        <td>{{ders.bolumAdi}}</td>
+        <td>{{ders.fakulteAdi}}</td>
+        <td>
+          <button type="button" class="btn btn-danger" data-bs-toggle="modal" (click)="currentDers(ders.id)" data-bs-target="#Sil"> Sil</button>
+        </td>
+        <td>
+          <button type="button" class="btn btn-success" data-bs-target="#Guncelle" data-bs-toggle="modal" (click)="setCurrentDers(ders)"> Güncelle</button>
+        </td>
+      </tr>
+    </tbody>
+  
+  </table>
+  
+  <div  class="modal fade" id="Sil" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content ">
+            <div class="modal-header">
+                <h5 class="modal-title">Ders Sil</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Ders Silinecek Onaylıyor musunuz ?         
+            </div>
+            <div class="modal-footer">
+                <button type="button" routerLink="/idareciler/ders" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
+                <button type="button" routerLink="/idareciler/ders" class="btn btn-danger" onclick="location.reload()" (click)="delete()"   data-bs-dismiss="modal"> Sil</button> 
+            </div>
+        </div>
+    </div>
+  </div>
+    
+   <div  class="modal fade" id="Guncelle" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content ">
+        <div class="modal-header">
+          <h5 class="modal-title">Ders Güncelle</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          
+          <form class="box" [formGroup]="updateForm">
+            <label class="form-label">Id</label>
+            <br />
+            <input type="text" placeholder="Id"
+                formControlName="id"
+            >  
+            <br />
+          <label class="form-label">Dönem adı</label>
+          <br />
+            <input type="text" placeholder="Dönem adı"
+                formControlName="donemAdi"
+            >
+            <br />
+            <label class="form-label">Ders kodu</label>
+            <br />
+            <input type="text" placeholder="Ders kodu"
+                formControlName="dersKodu"
+            >
+            <br />
+            <label class="form-label">Ders adı</label>
+            <br />
+            <input type="text" placeholder="Ders adı"
+                formControlName="dersAdi"
+            >
+            <br />
+            <label class="form-label">Sınıf</label>
+            <br />
+            <input type="number" placeholder="Sınıf"
+                formControlName="sinif"
+            >
+            <br />
+            <label class="form-label">Bölüm adı</label>
+            <br />
+            <input type="text" placeholder="Bölüm adı"
+                formControlName="bolumAdi"
+            >
+            <br />
+            <label class="form-label">Fakülte adı</label>
+            <br />
+            <input type="text" placeholder="Fakülte adı"
+                formControlName="fakulteAdi"
+            >
+            <br />
+            <label class="form-label">Dönem id</label>
+            <br />
+            <input type="number" placeholder="Dönem id"
+                formControlName="donemId"
+            >
+            <br />
+            <label class="form-label">Bölüm id</label>
+            <br />
+            <input type="number" placeholder="Bölüm id"
+                formControlName="bolumId"
+            >
+        </form>
+      </div>  
+      <div class="modal-footer">
+        <button type="button" routerLink="/idareci/ders" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
+        <button type="button"  class="btn btn-success"  (click)="update()" data-bs-toogle="modal"> Güncelle</button>
+      </div>  
+    </div>
+        
+    </div>
+  </div> 

@@ -1,1 +1,19 @@
-<p>ogrenci-devamsizlik-durumu works!</p>
+<table class="table table-dark table-hover">
+    <thead>
+        <tr>
+            <th>Ders Adı</th>
+            <th>Devamsizlik Durumu</th>
+        </tr>
+
+    </thead>
+
+    <tbody *ngFor ="let devamsizlik of devamsizlikDetayDto">
+        <tr>
+           <td>{{devamsizlik.dersAdi}}</td>
+           <td *ngIf ="devamsizlik.devamsizlikDurumu">Geçti</td>
+           <td *ngIf ="!devamsizlik.devamsizlikDurumu">Kaldı</td>
+
+        </tr>
+    </tbody>
+
+</table>

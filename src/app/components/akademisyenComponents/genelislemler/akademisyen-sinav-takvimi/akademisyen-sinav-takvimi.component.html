@@ -1,1 +1,25 @@
-<p>akademisyen-sinav-takvimi works!</p>
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+      <table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Ders Kodu</th>
+            <th scope="col">Ders Adı</th>
+            <th scope="col">Sınav Türü</th>
+            <th scope="col">Sınav Tarihi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let sinav of sinavlar">
+            <th scope="row">{{sinav.dersKodu}}</th>
+            <td>{{sinav.dersAdi}}</td>
+            <td>{{sinav.sinavAdi}}</td>
+            <td>{{sinav.sinavTarihi}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+  

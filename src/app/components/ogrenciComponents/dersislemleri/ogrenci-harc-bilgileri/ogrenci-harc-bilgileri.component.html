@@ -1,1 +1,24 @@
-<p>ogrenci-harc-bilgileri works!</p>
+
+  <table  class="table table-dark table-hover" style="margin-top: 20px;">
+    <thead>
+        <tr>
+          <th scope="col">Dönemi</th>
+          <th scope="col">Tipi</th>
+          <th scope="col">Türü</th>
+          <th scope="col">Tutar</th>
+          <th scope="col">Tahakkuk Tarihi</th>
+          <th scope="col">Odeme Tarihi</th>
+        </tr>
+      </thead>
+
+      <tbody *ngFor="let harc of harcs">
+        <tr >
+          <th >{{harc.donem}}</th>
+          <td>{{harc.tipi}}</td>
+          <td>{{harc.turu}}</td>
+          <td>{{harc.tutar}}</td>
+          <td>{{harc.tahakkukTarihi}}</td>
+          <td>{{harc.OdemeTarihi}}</td>
+      </tr>
+  </tbody> 
+</table>

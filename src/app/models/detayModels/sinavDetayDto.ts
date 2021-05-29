@@ -4,5 +4,7 @@ export interface SinavDetayDto{
     sinavAdi:String;
     sinavTarihi:Date;
     dersAdi:String;
-    dersId:number
+    dersId:number;
+    akademisyenId:number
+    dersKodu:string
 }

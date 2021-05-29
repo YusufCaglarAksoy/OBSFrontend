@@ -13,7 +13,7 @@ export class DevamsizlikService {
 
   constructor(private httpClient :HttpClient) { }
 
-  apiUrl = 'https://localhost:44390/api/harclar/'
+  apiUrl = 'https://localhost:44390/api/devamsizliklar/'
 
   add(devamsizlik : Devamsizlik):Observable<ResponseModel> {
     return this.httpClient.post<ResponseModel>(this.apiUrl+"add",devamsizlik)

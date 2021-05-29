@@ -1,1 +1,71 @@
-<p>akademisyen-not-giris works!</p>
+<div class="card1" style="width: 75rem; margin-left: 30px;">
+  <div class="card-body">
+  <div class="row">
+  <div class="col-md-1">
+
+  </div>
+
+<div class="row">
+  <div class="col-md-1">
+  </div>
+  <div class="col-md-10">
+    <div class="row">
+      <h3 id="renk">Not Girişi</h3>
+        <div class="col-md-4">
+          <form >
+          <mat-form-field appearance="fill">
+            <mat-label id="renk">Ders Seçiniz</mat-label>
+            <mat-select [(ngModel)]="selectedValue" name="sinav">
+              <mat-option *ngFor="let sinav of simpleArray2" [value]="sinav">
+                {{sinav}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </form>
+      </div>
+        <div class="col-md-4">
+        <form >
+          <mat-form-field appearance="fill">
+            <mat-label id="renk">Sınav Seçiniz</mat-label>
+            <mat-select [(ngModel)]="selectedValue2" name="sinav">
+              <mat-option *ngFor="let sinav of simpleArray3" (click) = 'getByList()' [value]="sinav">
+                {{sinav}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </form>
+      </div>
+      <div class="col-md-2">
+      </div>
+    <div class="container">
+      <table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Öğrenci Numarası</th>
+            <th scope="col">Öğrenci Adı</th>
+            <th scope="col">Ders Adı</th>
+            <th scope="col">Sınav Türü</th>
+            <th scope="col">Not</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+           <tr *ngFor="let not of notlar">
+            <th scope="row" >{{not.ogrenciNo}} </th>
+            <td>{{not.ogrenciAdi}} {{not.ogrenciSoyadi}}</td>
+            <td>{{not.dersAdi}}</td>
+            <td>{{not.sinavAdi}}</td>
+            <td><input style="width: 67px;"  [value] = "not.sinavNot" [(ngModel)]="not.sinavNot" type="number" id="yeniSinavNotu" class="form-control" min="0" max="100" value="Sınav Notu"></td>
+            <td><button class="btn-primary" (click) = "notDegis(not)">Notu Güncelle</button></td>
+          </tr>
+      </table>
+      <br>
+      <!-- <button type="button" class="btn btn-primary bg-white" style="color: black;" (click)= 'notlariYukle()'>Yükle</button> -->
+    </div>
+  </div>
+  <div class="col-md-1">
+  </div>
+</div>
+
+</div>
+</div>

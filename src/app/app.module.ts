@@ -18,12 +18,10 @@ import { OgrenciNavbarComponent } from './components/ogrenciComponents/ogrenci-n
 import { OgrenciSidebarComponent } from './components/ogrenciComponents/ogrenci-sidebar/ogrenci-sidebar.component';
 import { OgrenciGenelBilgilerComponent } from './components/ogrenciComponents/genelislemler/ogrenci-genel-bilgiler/ogrenci-genel-bilgiler.component';
 import { OgrenciDanismanBilgileriComponent } from './components/ogrenciComponents/genelislemler/ogrenci-danisman-bilgileri/ogrenci-danisman-bilgileri.component';
-import { OgrenciDonemDersleriComponent } from './components/ogrenciComponents/genelislemler/ogrenci-donem-dersleri/ogrenci-donem-dersleri.component';
 import { OgrenciBolumDersleriComponent } from './components/ogrenciComponents/genelislemler/ogrenci-bolum-dersleri/ogrenci-bolum-dersleri.component';
 import { OgrenciDersProgramiComponent } from './components/ogrenciComponents/genelislemler/ogrenci-ders-programi/ogrenci-ders-programi.component';
 import { OgrenciNotListesiComponent } from './components/ogrenciComponents/dersislemleri/ogrenci-not-listesi/ogrenci-not-listesi.component';
 import { OgrenciHarcBilgileriComponent } from './components/ogrenciComponents/dersislemleri/ogrenci-harc-bilgileri/ogrenci-harc-bilgileri.component';
-import { OgrenciSinavTakvimiComponent } from './components/ogrenciComponents/dersislemleri/ogrenci-sinav-takvimi/ogrenci-sinav-takvimi.component';
 import { OgrenciDevamsizlikDurumuComponent } from './components/ogrenciComponents/dersislemleri/ogrenci-devamsizlik-durumu/ogrenci-devamsizlik-durumu.component';
 import { OgrenciDersKayitComponent } from './components/ogrenciComponents/dersislemleri/ogrenci-ders-kayit/ogrenci-ders-kayit.component';
 import { OgrenciTranskriptComponent } from './components/ogrenciComponents/dersislemleri/ogrenci-transkript/ogrenci-transkript.component';
@@ -35,9 +33,7 @@ import { IdareciSidebarComponent } from './components/idareciComponents/idareci-
 import { IdareciNavbarComponent } from './components/idareciComponents/idareci-navbar/idareci-navbar.component';
 import { AkademisyenGenelBilgilerComponent } from './components/akademisyenComponents/genelislemler/akademisyen-genel-bilgiler/akademisyen-genel-bilgiler.component';
 import { AkademisyenDersProgramiComponent } from './components/akademisyenComponents/genelislemler/akademisyen-ders-programi/akademisyen-ders-programi.component';
-import { AkademisyenOgrenciBilgileriComponent } from './components/akademisyenComponents/genelislemler/akademisyen-ogrenci-bilgileri/akademisyen-ogrenci-bilgileri.component';
 import { AkademisyenSinifListeComponent } from './components/akademisyenComponents/genelislemler/akademisyen-sinif-liste/akademisyen-sinif-liste.component';
-import { AkademisyenSinavTakvimiComponent } from './components/akademisyenComponents/genelislemler/akademisyen-sinav-takvimi/akademisyen-sinav-takvimi.component';
 import { AkademisyenNotGirisComponent } from './components/akademisyenComponents/dersislemleri/akademisyen-not-giris/akademisyen-not-giris.component';
 import { IdareciAkademisyenListesiComponent } from './components/idareciComponents/genelislemler/idareci-akademisyen-listesi/idareci-akademisyen-listesi.component';
 import { IdareciBolumListesiComponent } from './components/idareciComponents/genelislemler/idareci-bolum-listesi/idareci-bolum-listesi.component';
@@ -58,6 +54,11 @@ import { AkademisyenKullaniciBilgileriComponent } from './components/akademisyen
 import { AkademisyenMailOlusturComponent } from './components/akademisyenComponents/kullaniciislemleri/akademisyen-mail-olustur/akademisyen-mail-olustur.component';
 import { AkademisyenNavbarComponent } from './components/akademisyenComponents/akademisyen-navbar/akademisyen-navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { MatFormFieldModule} from '@angular/material/form-field';
+import { MatSelectModule} from '@angular/material/select';
+import { MatButtonModule} from '@angular/material/button';
+import { MatInputModule} from '@angular/material/input';
+import { AkademisyenSinavTakvimiComponent } from './components/akademisyenComponents/genelislemler/akademisyen-sinav-takvimi/akademisyen-sinav-takvimi.component';
 
 @NgModule({
   declarations: [
@@ -71,12 +72,10 @@ import { FooterComponent } from './components/footer/footer.component';
     OgrenciSidebarComponent,
     OgrenciGenelBilgilerComponent,
     OgrenciDanismanBilgileriComponent,
-    OgrenciDonemDersleriComponent,
     OgrenciBolumDersleriComponent,
     OgrenciDersProgramiComponent,
     OgrenciNotListesiComponent,
     OgrenciHarcBilgileriComponent,
-    OgrenciSinavTakvimiComponent,
     OgrenciDevamsizlikDurumuComponent,
     OgrenciDersKayitComponent,
     OgrenciTranskriptComponent,
@@ -104,15 +103,14 @@ import { FooterComponent } from './components/footer/footer.component';
     AkademisyenSinavGirisComponent,
     AkademisyenGenelBilgilerComponent,
     AkademisyenDersProgramiComponent,
-    AkademisyenOgrenciBilgileriComponent,
     AkademisyenSinifListeComponent,
-    AkademisyenSinavTakvimiComponent,
     AkademisyenGelenMaillerComponent,
     AkademisyenGonderilenMaillerComponent,
     AkademisyenKullaniciBilgileriComponent,
     AkademisyenMailOlusturComponent,
     AkademisyenNavbarComponent,
     FooterComponent,
+    AkademisyenSinavTakvimiComponent,
   ],
   imports: [
     BrowserModule,
@@ -121,6 +119,10 @@ import { FooterComponent } from './components/footer/footer.component';
     FormsModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
+    MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatSelectModule,
     ToastrModule.forRoot({
       positionClass:"toast-bottom-right"
     })

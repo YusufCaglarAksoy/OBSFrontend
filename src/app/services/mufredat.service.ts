@@ -10,7 +10,7 @@ import { ResponseModel } from '../models/responseModels/ResponseModel';
   providedIn: 'root'
 })
 export class MufredatService {
-  apiUrl = 'https://localhost:44390/api/mufredatlar/'
+  apiUrl = 'https://localhost:44390/api/siniflisteler/'
   constructor(private httpClient:HttpClient) { }
 
   add(mufredat:Mufredat):Observable<ResponseModel>{

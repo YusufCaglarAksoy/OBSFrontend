@@ -1,0 +1,16 @@
+.card1 {
+  color: rgb(40, 218, 218);
+  background-color: rgb(43, 40, 202);
+  }
+  
+  .card-body button{
+    border: 2px solid #ffffff;
+      padding: 5px 20px;
+      outline: none;
+      color: rgb(7, 8, 26);
+      background-color: rgb(118, 165, 226);
+      border-radius: 24px;
+      transition: 0.25s;
+      margin-left: 10px;
+      cursor: pointer
+  }

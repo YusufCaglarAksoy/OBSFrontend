@@ -1,0 +1,75 @@
+.btn{
+  background: rgba(177, 13, 13, 0.425);
+  border: 2px solid #ffffff;
+  padding: 5px 20px;
+  outline: none;
+  color: rgb(255, 255, 255);
+  border-radius: 24px;
+  transition: 0.25s;
+  margin-left: 10px;
+  cursor: pointer
+}
+
+table {
+  width: 800px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+th,
+td {
+  padding: 15px;
+  background-color: rgba(41, 25, 25, 0.2);
+  color: rgb(255, 255, 255);
+}
+
+th {
+  text-align: left;
+}
+
+.table button {
+  background: rgba(177, 13, 13, 0.425);
+  border: 2px solid #ffffff;
+  padding: 5px 20px;
+  outline: none;
+  color: rgb(255, 255, 255);
+  border-radius: 24px;
+  transition: 0.25s;
+  margin-left: 10px;
+  cursor: pointer
+}
+
+.modal-content {
+background-color: #212529;
+}
+.modal-header{
+color:white;  
+}
+
+.modal-body{
+  color:white;  
+  }
+
+.modal-footer button{
+  background: rgba(177, 13, 13, 0.425);
+  border: 2px solid #ffffff;
+  padding: 5px 20px;
+  outline: none;
+  color: rgb(255, 255, 255);
+  border-radius: 24px;
+  transition: 0.25s;
+  margin-left: 10px;
+  cursor: pointer
+}  
+
+.modal-header button{
+  border: 2px solid #ffffff;
+  padding: 5px 20px;
+  outline: white;
+  color: rgb(255, 255, 255);
+  border-radius: 24px;
+  transition: 0.25s;
+  margin-left: 10px;
+  cursor: pointer
+}

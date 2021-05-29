@@ -1,0 +1,30 @@
+.card1 {
+  color: rgb(198, 224, 224);
+  background-color: rgb(9, 168, 102);
+  }
+  
+  .card-body mat-form-field{
+    border: 2px solid #fdebeb;
+      outline: none;
+      color: rgb(13, 22, 182);
+      background-color: rgb(18, 66, 133);
+      border-radius: 24px;
+      transition: 0.25s;
+      margin-left: 10px;
+      cursor: pointer;
+      width: 20;
+      height: 50px;
+      text-align: center;
+  }
+
+  .mat-select mat-option{
+      background-color: rgb(215, 17, 233);
+
+  }
+
+  #renk{
+  
+      color: white;
+      margin-top: 2px;
+  }
+  

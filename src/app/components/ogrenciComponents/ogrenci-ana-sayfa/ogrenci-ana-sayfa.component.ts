@@ -14,17 +14,16 @@ import { OgrenciService } from 'src/app/services/ogrenci.service';
 })
 export class OgrenciAnaSayfaComponent implements OnInit {
 
-  ogrenciler:OgrenciDetayDto[]
+  ogrenci:OgrenciDetayDto;
+
   constructor(private localStorageService:LocalStorageService,
               private ogrenciService:OgrenciService) { }
 
   ngOnInit(): void { 
-    this.getOgrenciler()
+    this.getOgrenci()
   }
 
-  getOgrenciler(){
-    this.ogrenciService.getDetails().subscribe(respon=>{
-      this.ogrenciler = respon.data
-    })
+  getOgrenci(){
+    this.ogrenci=this.localStorageService.get('user')[0];
   }
 }

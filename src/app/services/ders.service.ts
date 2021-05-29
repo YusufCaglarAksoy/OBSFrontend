@@ -45,4 +45,11 @@ export class DersService {
   getByDonemId(id : number):Observable<ListResponseModel<DersDetayDto>> {
     return this.httpClient.get<ListResponseModel<DersDetayDto>>(this.apiUrl+"getbydonemid?donemid="+id)
   }
+
+  getByBolumId(id : number):Observable<ListResponseModel<DersDetayDto>> {
+    return this.httpClient.get<ListResponseModel<DersDetayDto>>(this.apiUrl+"getbybolumid?bolumid="+id)
+  }
+  getBySinif(sinif : number):Observable<ListResponseModel<DersDetayDto>> {
+    return this.httpClient.get<ListResponseModel<DersDetayDto>>(this.apiUrl+"getbysinif?sinif="+sinif)
+  }
 }

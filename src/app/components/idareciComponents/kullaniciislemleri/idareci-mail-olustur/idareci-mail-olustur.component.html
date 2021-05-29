@@ -1,1 +1,19 @@
-<p>idareci-mail-olustur works!</p>
+
+    <div class="row" style="margin-left: 1%;">
+        <div class="col-md-6">
+  
+            <form class="box" [formGroup]="addForm">
+                <h1>Mail oluştur</h1>
+                <input class="text1" type="text" name="" placeholder="Alıcı Mail"
+                formControlName="aliciMail">
+                <input class="text1" type="text" placeholder="Mail Baslik"
+                    formControlName="mailBaslik">
+                <input class="text2" type="text" placeholder="mail Text"
+                    formControlName="mailText">  
+
+
+                <input type="submit" name="" value="Gönder" (click)="add()">
+            </form>
+        </div>
+    </div>
+

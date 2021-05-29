@@ -1,1 +1,35 @@
-<p>akademisyen-sinif-liste works!</p>
+<h3 id="renk">Not Girişi</h3>
+          <div class="col-md-4">
+            <form >
+            <mat-form-field appearance="fill">
+              <mat-label id="renk">Ders Seçiniz</mat-label>
+              <mat-select [(ngModel)]="selectedValue" name="sube">
+                <mat-option *ngFor="let sube of subeler" [value]="sube.id" (click) = 'getOgrenciler()'>
+                  {{sube.dersAdi}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </form>
+        </div>
+
+<table class="table table-dark table-hover">
+    <thead>
+        <tr>
+            <th>Öğrenci isim</th>
+            <th>Öğrenci Soyadı</th>
+            <th>Öğrenci Email</th>
+            <th>Öğrenci Numarası</th>
+        </tr>
+
+    </thead>
+
+    <tbody *ngFor="let sinifListe of sinifListeler">
+        <tr>
+            <td>{{sinifListe.ogrenciAdi}}</td>
+            <td>{{sinifListe.ogrenciSoyadi}}</td>
+            <td>{{sinifListe.ogrenciMail}}</td>
+            <td>{{sinifListe.ogrenciNo}}</td>
+        </tr>
+    </tbody>
+</table>
+

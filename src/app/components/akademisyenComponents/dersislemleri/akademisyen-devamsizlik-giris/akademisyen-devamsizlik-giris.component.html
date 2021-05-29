@@ -1,1 +1,46 @@
-<p>akademisyen-devamsizlik-giris works!</p>
+<div class="card1" style="width: 75rem; margin-left: 30px;">
+  <div class="card-body">
+  <div class="row">
+  <div class="col-md-1">
+
+  </div>
+<div class="row">
+    <div class="col-md-1">
+  
+    </div>
+    <div class="col-md-11">
+      <div class="row">
+        <h3 id="renk">Devamsızlık Girişi</h3>
+        <div class="col-md-4">
+          <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+          <select class="form-select" id="dersGiris" [(ngModel)]="selectedDersAdi">
+            <option selected>Ders Seçiniz</option>
+            <option value="1" *ngFor="let sube of subeler" [value] = "sube.dersAdi">{{sube.dersAdi}}</option>
+          </select>
+        </div>
+        <div class="col-md-5">
+          <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+          <select class="form-select" id="sinavTuruGiris" [(ngModel)]="selectedOgrenci">
+            <option selected>Öğrenci Seçiniz</option>
+            <option value="1"*ngFor="let ogrenci of ogrenciler" [value] = "ogrenci.id">{{ogrenci.isim}} {{ogrenci.soyad}}</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <br>
+        <div class="d-flex">
+          <div class="form-group row">
+            <label id="renk" for="example-datetime-local-input" class="col-1 col-form-label">Tarih:</label>
+            <div>
+              <input class="form-control"  [(ngModel)]="selectedDate" type="datetime-local" value="2021-08-19T13:45:00" id="example-datetime-local-input" [value]="selectedDate" (click) = 'getDers()'>
+            </div>
+          </div>        
+          <button type="button" class="btn btn-primary bg-white" style="color: black; margin-top: 35px; margin-left: 65px;" (click) = 'devamsizlikKaydet()'>Ekle</button>
+
+        </div>
+        <br>
+      </div>
+  
+    </div>
+  </div>
+  

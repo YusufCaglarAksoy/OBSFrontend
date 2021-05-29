@@ -3,4 +3,5 @@ export interface Sinav{
     sinavTurId:number;
     sinavTarihi:Date;
     dersId:number
+    akademisyenId:number
 }

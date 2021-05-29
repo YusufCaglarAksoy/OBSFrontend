@@ -28,12 +28,14 @@ main {
   vertical-align: -.125em;
   pointer-events: none;
   fill: currentColor;
+  
 }
 
 .dropdown-toggle { outline: 0; }
 
 .nav-flush .nav-link {
   border-radius: 0;
+  
 }
 
 .btn-toggle {
@@ -72,6 +74,7 @@ main {
   margin-top: .125rem;
   margin-left: 1.25rem;
   text-decoration: none;
+  
 }
 .btn-toggle-nav a:hover,
 .btn-toggle-nav a:focus {
@@ -88,6 +91,7 @@ main {
 .wrapper{
   position: relative;
   overflow: hidden;
+  color: #9b1e48;
 }
 .d-flex{
 background-color: #9b1e48;

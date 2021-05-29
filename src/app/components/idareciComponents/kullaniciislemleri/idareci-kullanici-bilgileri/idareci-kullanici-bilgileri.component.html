@@ -1,1 +1,94 @@
-<p>idareci-kullanici-bilgileri works!</p>
+<h4><span class="badge bg-dark">KULLANICI BİLGİLERİM</span></h4>
+    <head>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <title>Genel Bilgiler</title>
+    </head>
+
+            <div class="from-group">
+                <div class="panel-default">
+                    <div class="panel-heading" style="font-size: 12px">Akademik
+                        Bilgiler</div>
+                    <table class="table">
+                        <tbody class="tbody">
+                            <tr class="tr">
+                                <th class="th">
+                                    <span class="span">Sicil No</span>
+                                </th>
+                                <th class="th">
+                                    <span class="span">{{idareciDetayDto.sicilNo}}</span>
+                                </th>
+                                <th class="th">
+                                    <span class="span">Fakülte</span>
+                                </th>
+                                <th class="th">
+                                    <span class="span">{{idareciDetayDto.fakulteAdi}}</span>
+                                </th>
+                            </tr>
+                            <tr class="tr">
+                                <th class="th">
+                                    <span class="span">Adı Soyadı</span>
+                                </th>
+                                <th class="th">
+                                    <span class="span">{{idareciDetayDto.isim}} {{idareciDetayDto.soyad}}</span>
+                                </th>
+                            </tr>
+                            <tr class="tr">
+                                <th>
+                                    <span class="span">Kayıt Tarihi / Sınıf</span>
+                                </th>
+                                <th>
+                                    <span class="span">{{idareciDetayDto.kayitTarihi}}</span>
+                                    &nbsp;
+                                    <span class="span">/ </span>
+                                    <span class="span"> 2</span>
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="panel-default">
+                    <div class="panel-heading xs" style="font-size: 12px">Diğer
+                        İletişim Bilgileri</div>
+                    <table class="table">
+                        <tbody class="tbody">
+                            <tr class="tr">
+                                <th style="width: 10%">
+                                    <span class="span">Cep Telefonu</span>
+                                </th>
+                                <th>
+                                    <div class="input-group">
+                                        <input  maxlength="11" type="tel" value="{{idareciDetayDto.telefonNumarasi}}" maxlength="11" class="input">
+                                        <span class="span">*(SMS için kullanılır) Telefon numarası, 0 ile başlamamalıdır ve toplam 10 hane olmalıdır</span>
+                                    </div>
+                                </th>
+                            </tr>
+                            <tr class="tr">
+                                <th style="width: 10%">
+                                    <span class="span">1.E-Posta</span>
+                                </th>
+                                <th>
+                                    <div class="input-group">
+                                        <input disabled="disabled" class="input" type="email" maxlength="50" value="{{idareciDetayDto.sicilNo}}@firat.edu.com.tr">
+                                        <span class="span">*(1. E-Posta ve 2. E-Posta adresleri şifre hatırlatma için kullanılır)</span>
+                                    </div>
+                                </th>
+                            </tr>
+                            <tr class="tr">
+                                <th style="width: 10%">
+                                    <span class="span">2.E-Posta</span>
+                                </th>
+                                <th>
+                                    <input formControlerName="eMail" class="input" type="email" value="{{idareciDetayDto.eMail}}" maxlength="50">
+                                    <span class="span">Sosyal Medya</span>
+                                    <input class="input" type="text" class="input">
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <a class="btn">
+                        <i class="fas fa-download"></i>
+                        <span style="margin-left:6px;">Kaydet</span>
+                    </a>
+            </div>
+

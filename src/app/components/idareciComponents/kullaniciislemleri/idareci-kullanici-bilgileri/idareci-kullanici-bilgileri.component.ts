@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { IdareciDetayDto } from 'src/app/models/detayModels/idareciDetayDto';
+import { AkademisyenService } from 'src/app/services/akademisyen.service';
+import { LocalStorageService } from 'src/app/services/local-storage-service.service';
 
 @Component({
   selector: 'app-idareci-kullanici-bilgileri',
@@ -6,10 +9,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./idareci-kullanici-bilgileri.component.css']
 })
 export class IdareciKullaniciBilgileriComponent implements OnInit {
-
-  constructor() { }
+  idareciDetayDto:IdareciDetayDto
+  constructor(private localStorageService:LocalStorageService,
+    private akademisyenService:AkademisyenService) { }
 
   ngOnInit(): void {
+    this.getBilgiler()
   }
+   getBilgiler(){
+     this.idareciDetayDto = this.localStorageService.get('user')[0]
+   }
+   
 
 }

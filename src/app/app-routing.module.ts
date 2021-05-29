@@ -11,12 +11,10 @@ import { OgrenciDersKayitComponent } from './components/ogrenciComponents/dersis
 import { OgrenciDevamsizlikDurumuComponent } from './components/ogrenciComponents/dersislemleri/ogrenci-devamsizlik-durumu/ogrenci-devamsizlik-durumu.component';
 import { OgrenciHarcBilgileriComponent } from './components/ogrenciComponents/dersislemleri/ogrenci-harc-bilgileri/ogrenci-harc-bilgileri.component';
 import { OgrenciNotListesiComponent } from './components/ogrenciComponents/dersislemleri/ogrenci-not-listesi/ogrenci-not-listesi.component';
-import { OgrenciSinavTakvimiComponent } from './components/ogrenciComponents/dersislemleri/ogrenci-sinav-takvimi/ogrenci-sinav-takvimi.component';
 import { OgrenciTranskriptComponent } from './components/ogrenciComponents/dersislemleri/ogrenci-transkript/ogrenci-transkript.component';
 import { OgrenciBolumDersleriComponent } from './components/ogrenciComponents/genelislemler/ogrenci-bolum-dersleri/ogrenci-bolum-dersleri.component';
 import { OgrenciDanismanBilgileriComponent } from './components/ogrenciComponents/genelislemler/ogrenci-danisman-bilgileri/ogrenci-danisman-bilgileri.component';
 import { OgrenciDersProgramiComponent } from './components/ogrenciComponents/genelislemler/ogrenci-ders-programi/ogrenci-ders-programi.component';
-import { OgrenciDonemDersleriComponent } from './components/ogrenciComponents/genelislemler/ogrenci-donem-dersleri/ogrenci-donem-dersleri.component';
 import { OgrenciGenelBilgilerComponent } from './components/ogrenciComponents/genelislemler/ogrenci-genel-bilgiler/ogrenci-genel-bilgiler.component';
 import { OgrenciGelenMaillerComponent } from './components/ogrenciComponents/kullaniciislemleri/ogrenci-gelen-mailler/ogrenci-gelen-mailler.component';
 import { OgrenciGonderilenMaillerComponent } from './components/ogrenciComponents/kullaniciislemleri/ogrenci-gonderilen-mailler/ogrenci-gonderilen-mailler.component';
@@ -33,8 +31,6 @@ import { IdareciKullaniciBilgileriComponent } from './components/idareciComponen
 import { IdareciMailOLusturComponent } from './components/idareciComponents/kullaniciislemleri/idareci-mail-olustur/idareci-mail-olustur.component';
 import { AkademisyenDersProgramiComponent } from './components/akademisyenComponents/genelislemler/akademisyen-ders-programi/akademisyen-ders-programi.component';
 import { AkademisyenGenelBilgilerComponent } from './components/akademisyenComponents/genelislemler/akademisyen-genel-bilgiler/akademisyen-genel-bilgiler.component';
-import { AkademisyenOgrenciBilgileriComponent } from './components/akademisyenComponents/genelislemler/akademisyen-ogrenci-bilgileri/akademisyen-ogrenci-bilgileri.component';
-import { AkademisyenSinavTakvimiComponent } from './components/akademisyenComponents/genelislemler/akademisyen-sinav-takvimi/akademisyen-sinav-takvimi.component';
 import { AkademisyenSinifListeComponent } from './components/akademisyenComponents/genelislemler/akademisyen-sinif-liste/akademisyen-sinif-liste.component';
 import { AkademisyenDevamsizlikGirisComponent } from './components/akademisyenComponents/dersislemleri/akademisyen-devamsizlik-giris/akademisyen-devamsizlik-giris.component';
 import { AkademisyenNotGirisComponent } from './components/akademisyenComponents/dersislemleri/akademisyen-not-giris/akademisyen-not-giris.component';
@@ -43,10 +39,11 @@ import { AkademisyenDersKayitOnaylamaComponent } from './components/akademisyenC
 import { AkademisyenOgrenciListesiComponent } from './components/akademisyenComponents/danismanislemleri/akademisyen-ogrenci-listesi/akademisyen-ogrenci-listesi.component';
 import { AkademisyenGelenMaillerComponent } from './components/akademisyenComponents/kullaniciislemleri/akademisyen-gelen-mailler/akademisyen-gelen-mailler.component';
 import { AkademisyenGonderilenMaillerComponent } from './components/akademisyenComponents/kullaniciislemleri/akademisyen-gonderilen-mailler/akademisyen-gonderilen-mailler.component';
-import { AkademisyenKullaniciBilgileriComponent } from './components/akademisyenComponents/kullaniciislemleri/akademisyen-kullanici-bilgileri/akademisyen-kullanici-bilgileri.component';
 import { AkademisyenMailOlusturComponent } from './components/akademisyenComponents/kullaniciislemleri/akademisyen-mail-olustur/akademisyen-mail-olustur.component';
 import { IdareciLoginGuard } from './guards/idareci-login.guard';
 import { AkademisyenLoginGuard } from './guards/akademisyen-login.guard';
+import { AkademisyenKullaniciBilgileriComponent } from './components/akademisyenComponents/kullaniciislemleri/akademisyen-kullanici-bilgileri/akademisyen-kullanici-bilgileri.component';
+import { AkademisyenSinavTakvimiComponent } from './components/akademisyenComponents/genelislemler/akademisyen-sinav-takvimi/akademisyen-sinav-takvimi.component';
 
 const routes: Routes = [
   {path:"",pathMatch:"full",component:AnaSayfaComponent},
@@ -59,12 +56,10 @@ const routes: Routes = [
   {path:"ogrenci/devamsizlikDurumu",component:OgrenciDevamsizlikDurumuComponent,canActivate:[OgrenciLoginGuard]},
   {path:"ogrenci/harcBilgileri",component:OgrenciHarcBilgileriComponent,canActivate:[OgrenciLoginGuard]},
   {path:"ogrenci/notListesi",component:OgrenciNotListesiComponent,canActivate:[OgrenciLoginGuard]},
-  {path:"ogrenci/sinavTakimi",component:OgrenciSinavTakvimiComponent,canActivate:[OgrenciLoginGuard]},
   {path:"ogrenci/transkript",component:OgrenciTranskriptComponent,canActivate:[OgrenciLoginGuard]},
   {path:"ogrenci/bolumDersleri",component:OgrenciBolumDersleriComponent,canActivate:[OgrenciLoginGuard]},
   {path:"ogrenci/danismanBilgileri",component:OgrenciDanismanBilgileriComponent,canActivate:[OgrenciLoginGuard]},
   {path:"ogrenci/dersProgrami",component:OgrenciDersProgramiComponent,canActivate:[OgrenciLoginGuard]},
-  {path:"ogrenci/donemDersleri",component:OgrenciDonemDersleriComponent,canActivate:[OgrenciLoginGuard]},
   {path:"ogrenci/genelBilgiler",component:OgrenciGenelBilgilerComponent,canActivate:[OgrenciLoginGuard]},
   {path:"ogrenci/gelenMailler",component:OgrenciGelenMaillerComponent,canActivate:[OgrenciLoginGuard]},
   {path:"ogrenci/gonderilenMailler",component:OgrenciGonderilenMaillerComponent,canActivate:[OgrenciLoginGuard]},
@@ -84,9 +79,8 @@ const routes: Routes = [
   {path:"akademisyen/anasayfa",component:AkadamisyenAnasayfaComponent,canActivate:[AkademisyenLoginGuard]},
   {path:"akademisyen/dersProgrami",component:AkademisyenDersProgramiComponent,canActivate:[AkademisyenLoginGuard]},
   {path:"akademisyen/genelBilgiler",component:AkademisyenGenelBilgilerComponent,canActivate:[AkademisyenLoginGuard]},
-  {path:"akademisyen/ogrenciBilgileri",component:AkademisyenOgrenciBilgileriComponent,canActivate:[AkademisyenLoginGuard]},
-  {path:"akademisyen/sinavTakvimi",component:AkademisyenSinavTakvimiComponent,canActivate:[AkademisyenLoginGuard]},
   {path:"akademisyen/sinifListe",component:AkademisyenSinifListeComponent,canActivate:[AkademisyenLoginGuard]},
+  {path:"akademisyen/sinavTakvimi",component:AkademisyenSinavTakvimiComponent,canActivate:[AkademisyenLoginGuard]},
   {path:"akademisyen/devamsizlikGiris",component:AkademisyenDevamsizlikGirisComponent,canActivate:[AkademisyenLoginGuard]},
   {path:"akademisyen/notGiris",component:AkademisyenNotGirisComponent,canActivate:[AkademisyenLoginGuard]},
   {path:"akademisyen/sinavGiris",component:AkademisyenSinavGirisComponent,canActivate:[AkademisyenLoginGuard]},
@@ -94,7 +88,7 @@ const routes: Routes = [
   {path:"akademisyen/ogrenciListesi",component:AkademisyenOgrenciListesiComponent,canActivate:[AkademisyenLoginGuard]},
   {path:"akademisyen/gelenMailler",component:AkademisyenGelenMaillerComponent,canActivate:[AkademisyenLoginGuard]},
   {path:"akademisyen/gonderilenMailler",component:AkademisyenGonderilenMaillerComponent,canActivate:[AkademisyenLoginGuard]},
-  {path:"akademisyen/kullaniciBilgier",component:AkademisyenKullaniciBilgileriComponent,canActivate:[AkademisyenLoginGuard]},
+  {path:"akademisyen/kullaniciBilgileri",component:AkademisyenKullaniciBilgileriComponent,canActivate:[AkademisyenLoginGuard]},
   {path:"akademisyen/mailOlustur",component:AkademisyenMailOlusturComponent,canActivate:[AkademisyenLoginGuard]},
 ];
 

@@ -18,7 +18,7 @@ export interface DersKayitDetayDto{
     dersId3:number
     dersAdi3:string
     dersKodu3:string
-    dersId34:number
+    dersId4:number
     dersAdi4:string
     dersKodu4:string
     dersId5:number
@@ -39,4 +39,5 @@ export interface DersKayitDetayDto{
     dersId10:number
     dersAdi10:string
     dersKodu10:string
+    onayDurumu:boolean
 }

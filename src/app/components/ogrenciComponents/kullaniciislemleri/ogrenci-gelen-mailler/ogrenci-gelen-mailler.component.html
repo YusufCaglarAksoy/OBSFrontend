@@ -1,0 +1,43 @@
+<h4><span class="badge bg-dark">GELEN MAİLLER</span></h4>
+    <div class="row"><table class="table table-dark table-hover">
+        <thead>
+            <tr>
+              <th scope="col">MAİL BAŞLIK</th>
+              <th scope="col">MAİL</th>
+              <th scope="col">GÖNDEREN MAİL</th>
+              <th>
+            </tr>
+          </thead>
+
+          <tbody *ngFor= "let mail of mails" >
+            <tr >
+              <th >{{mail.mailBaslik}}</th>
+              <td>{{mail.mailText}}</td>
+              <td>{{mail.gonderenMail}}</td>
+              <td
+              class="d-flex">
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" (click)="mailId(mail.id)" data-bs-target="#Sil"> Sil</button>
+                <button routerLink="/ogrenci/mailOlustur" type="button"  class="btn btn-success"  data-bs-toggle="modal" > Cevapla</button>
+              </td>  
+          </tr>
+      </tbody>
+
+    </table></div>
+
+    <div  class="modal fade" id="Sil" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content ">
+                <div class="modal-header">
+                    <h5 class="modal-title">Mail Sil</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Mail Silinecek Onaylıyor musunuz ?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" routerLink="/ogrenci/gelenMailler" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
+                    <button type="button" routerLink="/ogrenci/gelenMailler" class="btn btn-danger" onclick="location.reload()" (click)="delete()"   data-bs-dismiss="modal"> Sil</button> 
+                </div>
+            </div>
+        </div>
+      </div>

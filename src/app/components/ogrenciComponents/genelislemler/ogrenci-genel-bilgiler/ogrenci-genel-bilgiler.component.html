@@ -1,1 +1,186 @@
-<p>ogrenci-genel-bilgiler works!</p>
+
+    <head>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <title>Genel Bilgiler</title>
+    </head>
+
+            <div class="from-group">
+                <div class="panel-default">
+                    <div class="panel-heading" style="font-size: 12px">Akademik
+                        Bilgiler</div>
+                    <table class="table">
+                        <tbody class="tbody">
+                            <tr class="tr">
+                                <th class="th">
+                                    <span class="span">Öğrenci No</span>
+                                </th>
+                                <th class="th">
+                                    <span class="span">{{ogrenciDetayDto.ogrenciNo}}</span>
+                                </th>
+                                <th class="th">
+                                    <span class="span">Fakülte</span>
+                                </th>
+                                <th class="th">
+                                    <span class="span">{{ogrenciDetayDto.fakulteAdi}}</span>
+                                </th>
+                            </tr>
+                            <tr class="tr">
+                                <th class="th">
+                                    <span class="span">Adı Soyadı</span>
+                                </th>
+                                <th class="th">
+                                    <span class="span">{{ogrenciDetayDto.isim}} {{ogrenciDetayDto.soyad}}</span>
+                                </th>
+                                <th class="th" style="width: 10%">
+                                    <span class="span">Bölüm</span>
+                                </th>
+                                <th class="th">
+                                    <span class="span">{{ogrenciDetayDto.bolumAdi}}</span>
+                                </th>
+                            </tr>
+                            <tr class="tr">
+                                <th>
+                                    <span class="span">Kayıt Tarihi / Sınıf</span>
+                                </th>
+                                <th>
+                                    <span class="span">{{ogrenciDetayDto.kayitTarihi}}</span>
+                                    &nbsp;
+                                    <span class="span">/ </span>
+                                    <span class="span"> 2</span>
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="panel-default">
+                    <div class="panel-heading" style="font-size: 12px">Aile İletişim Bilgileri</div>
+                    <table class="table">
+                        <tbody class="tbody">
+                            <tr class="tr">
+                                <th style="width: 10%">
+                                    <span class="span">Adres</span>
+                                </th>
+                                <th>
+                                    <input type="text" disabled="disabled" maxlength="200" value="{{ogrenciDetayDto.aileAdres}}" class="input">
+                                </th>
+                            </tr>
+                            <tr class="tr">
+                                <th style="width: 10%">
+                                    <span class="span">Telefon</span>
+                                </th>
+                                <th>
+                                    <input type="text" disabled="disabled" maxlength="11" value="{{ogrenciDetayDto.aileTelefon}}" class="input">
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="panel-default">
+                    <div class="panel-heading" style="font-size: 12px">İkamet İletişim Bilgileri</div>
+                    <table class="table">
+                        <tbody class="tbody">
+                            <tr class="tr">
+                                <th style="width: 10%">
+                                    <span class="span">Adres</span>
+                                </th>
+                                <th>
+                                    <input type="text" disabled="disabled" class="text-area" maxlength="200" value="{{ogrenciDetayDto.aileAdres}}" class="input">
+                                </th>
+                            </tr>
+                            <tr class="tr">
+                                <th style="width: 10%">
+                                    <span class="span">Telefon</span>
+                                </th>
+                                <th>
+                                    <input type="text"disabled="disabled" class="text-area" maxlength="11" value="{{ogrenciDetayDto.aileTelefon}}" class="input">
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="panel-default">
+                    <div class="panel-heading xs" style="font-size: 12px">Diğer
+                        İletişim Bilgileri</div>
+                    <table class="table">
+                        <tbody class="tbody">
+                            <tr class="tr">
+                                <th style="width: 10%">
+                                    <span class="span">Cep Telefonu</span>
+                                </th>
+                                <th>
+                                    <div class="input-group">
+                                        <input  maxlength="11" type="tel" value="{{ogrenciDetayDto.telefonNumarasi}}" maxlength="11" class="input">
+                                        <span class="span">*(SMS için kullanılır) Telefon numarası, 0 ile başlamamalıdır ve toplam 10 hane olmalıdır</span>
+                                    </div>
+                                </th>
+                            </tr>
+                            <tr class="tr">
+                                <th style="width: 10%">
+                                    <span class="span">1.E-Posta</span>
+                                </th>
+                                <th>
+                                    <div class="input-group">
+                                        <input disabled="disabled" class="input" type="email" maxlength="50" value="{{ogrenciDetayDto.ogrenciNo}}@firat.edu.com.tr">
+                                        <span class="span">*(1. E-Posta ve 2. E-Posta adresleri şifre hatırlatma için kullanılır)</span>
+                                    </div>
+                                </th>
+                            </tr>
+                            <tr class="tr">
+                                <th style="width: 10%">
+                                    <span class="span">2.E-Posta</span>
+                                </th>
+                                <th>
+                                    <input formControlerName="eMail" class="input" type="email" value="{{ogrenciDetayDto.eMail}}" maxlength="50">
+                                    <span class="span">Sosyal Medya</span>
+                                    <input class="input" type="text" class="input">
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="panel-default">
+                    <div class="panel-heading" class="panel-heading"
+                        style="font-size: 12px">Üniversite Tarafından Yapılacak Para İadelerinde Kullanılacak Banka Bilgileri</div>
+                    <table class="table">
+                        <tbody class="tbody">
+                            <tr class="tr">
+                                <th style="width: 10%">
+                                    <span class="span">Banka Adı</span>
+                                </th>
+                                <th>
+                                    <input formControlerName="bankaAdi" type="text" value="{{ogrenciDetayDto.bankaAdi}}" class="input" autocomplete="off">
+                                    <span class="span">Şube Adı</span>
+                                    <input formControlerName="subeAdi" type="text" value="{{ogrenciDetayDto.subeAdi}}" class="input" autocomplete="off">
+                                </th>
+                            </tr>
+                            <tr class="tr">
+                                <th>
+                                    <span class="span">Şube Kodu</span>
+                                </th>
+                                <th>
+                                    <input formControlerName="subeKodu" type="number" maxlength="100" value="{{ogrenciDetayDto.subeKodu}}" class="input" autocomplete="off">
+                                    <span class="span">Hesap Numarası</span>
+                                    <input formControlerName="hesapNumarasi" type="text" maxlength="100" value="{{ogrenciDetayDto.hesapNumarasi}}" class="input">
+                                </th>
+                            </tr>
+                            <tr class="tr">
+                                <th>
+                                    <span class="span">İBAN</span>
+                                </th>
+                                <th>
+                                    <span class="span">TR</span>
+                                    &nbsp;
+                                    <input formControlerName="iBan" type="text" value="{{ogrenciDetayDto.iBAN}}"maxlength="24" class="input" autocomplete="off">
+                                    <span class="span">H.Sah. Adı Soyadı</span>
+                                    <input formControlerName="hesapSahibininAdiSoyadi" value="{{ogrenciDetayDto.hesapSahibininAdiSoyadi}}" type="text" maxlength="100" class="input" autocomplete="off">
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <a class="btn" (click)="update()">
+                        <i class="fas fa-download"></i>
+                        <span style="margin-left:6px;">Kaydet</span>
+                    </a>
+            </div>
+

@@ -1,1 +1,129 @@
-<p>akademisyen-ders-kayit-onaylama works!</p>
+<table class="table table-dark table-hover" style="margin-top: 20px;">
+
+    <thead>
+      <tr class="table-active">
+          <th>Öğrenci No</th>
+          <th>Öğrenci Adı</th>
+          <th>Öğrenci Soyadi</th>
+          <th>Öğrenci Mail</th>
+          <th>Onay Durumu</th>
+          <th></th>
+          <th></th>
+        </tr>
+    </thead>
+  
+    <tbody *ngFor="let ders of dersKayitlari">
+      <tr>
+        <th>{{ders.ogrenciNo}}</th>
+        <td>{{ders.ogrenciAdi}}</td>
+        <td>{{ders.ogrenciSoyadi}}</td>
+        <td>{{ders.ogrenciMail}}</td>
+        <td *ngIf="ders.onayDurumu">Onaylandı</td>
+        <td *ngIf="!ders.onayDurumu">Onaylanmadı</td>
+        <td class="d-flex">
+          <button type="button" class="btn btn-danger" data-bs-toggle="modal" (click)="currentDersKayit(ders)" data-bs-target="#Onayla">Onayla</button>
+          <button type="button" class="btn btn-success" data-bs-target="#Sil" data-bs-toggle="modal" (click)="currentDersKayit(ders)" >Sil</button>
+          <button type="button" class="btn btn-success" data-bs-target="#Guncelle" (click)="currentDersKayit(ders)" data-bs-toggle="modal" > Detay</button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+
+  <div  class="modal fade" id="Sil" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content ">
+            <div class="modal-header">
+                <h5 class="modal-title">Ders Sil</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Ders Kaydı Silinecek Onaylıyor musunuz ?         
+            </div>
+            <div class="modal-footer">
+                <button type="button" routerLink="/akademisyen/dersKayitOnaylama" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
+                <button type="button" routerLink="/akademisyen/dersKayitOnaylama" class="btn btn-danger" onclick="location.reload()" (click)="delete()"   data-bs-dismiss="modal"> Sil</button> 
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <div  class="modal fade" id="Onayla" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content ">
+            <div class="modal-header">
+                <h5 class="modal-title">Ders Sil</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Ders Kaydı Onaylanacak Onaylıyor musunuz ?         
+            </div>
+            <div class="modal-footer">
+                <button type="button" routerLink="/akademisyen/dersKayitOnaylama" class="btn btn-secondary" data-bs-dismiss="modal" (click)="update()">Onayla</button>
+                <button type="button" routerLink="/akademisyen/dersKayitOnaylama" class="btn btn-danger"    data-bs-dismiss="modal">İptal</button> 
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <table  class="table table-dark table-hover" style="margin-top: 20px;">
+    <thead>
+        <tr>
+          <th scope="col">Ders Kodu</th>
+          <th scope="col">Ders Adi</th>
+          <th scope="col">{{currentKayit.ogrenciAdi}} {{currentKayit.ogrenciSoyadi}}</th>
+        </tr>
+      </thead>
+      <tbody >
+        <tr >
+          <th>{{currentKayit.dersKodu1}}</th>
+          <th>{{currentKayit.dersAdi1}}</th>
+          
+        </tr>
+        <tr >
+          <th>{{currentKayit.dersKodu2}}</th>
+          <th>{{currentKayit.dersAdi2}}</th>
+          
+        </tr>
+        <tr >
+          <th>{{currentKayit.dersKodu3}}</th>
+          <th>{{currentKayit.dersAdi3}}</th>
+          
+        </tr>
+        <tr >
+          <th>{{currentKayit.dersKodu4}}</th>
+          <th>{{currentKayit.dersAdi4}}</th>
+          
+        </tr>
+        <tr >
+          <th>{{currentKayit.dersKodu5}}</th>
+          <th>{{currentKayit.dersAdi5}}</th>
+          
+        </tr>
+        <tr >
+          <th>{{currentKayit.dersKodu6}}</th>
+          <th>{{currentKayit.dersAdi6}}</th>
+          
+        </tr>
+        <tr >
+          <th>{{currentKayit.dersKodu7}}</th>
+          <th>{{currentKayit.dersAdi7}}</th>
+          
+        </tr>
+        <tr >
+          <th>{{currentKayit.dersKodu8}}</th>
+          <th>{{currentKayit.dersAdi8}}</th>
+          
+        </tr>
+        <tr >
+          <th>{{currentKayit.dersKodu9}}</th>
+          <th>{{currentKayit.dersAdi9}}</th>
+          
+        </tr>
+        <tr >
+          <th>{{currentKayit.dersKodu10}}</th>
+          <th>{{currentKayit.dersAdi10}}</th>
+          
+        </tr>
+  </tbody>
+  </table>

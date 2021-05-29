@@ -1,1 +1,54 @@
-<p>ogrenci-danisman-bilgileri works!</p>
+<div class="panel-default">
+    <div class="panel-heading">
+        <span>Danışman Bilgileri</span>
+    </div>
+    <table class="table-hover" style="width:100%">
+        <tbody>
+            <tr class="tr">
+                <th style="width:10%">
+                    <span class="span">AdıSoyadı</span>
+                </th>
+                <th style="width:80%">
+                    <span class="span">{{getUser().danismanAdi}} {{getUser().danismanSoyadi}}</span>
+                </th>
+                <th colspan="1" rowspan="6" style="text-align: center;width:10%;">
+                    <img class="img">
+                    <br>
+                </th>
+            </tr>
+            <tr class="tr">
+                <th>
+                    <span class="span">Fakülte</span></th>
+                <th>
+                    <span class="span">{{getUser().fakulteAdi}}</span>
+                </th>
+            </tr>
+            <tr class="tr">
+                <th>
+                    <span class="span">Bölüm</span>
+                </th>
+                <th>
+                    <span class="span">{{getUser().bolumAdi}}</span>
+                </th>
+            </tr>
+            <tr class="tr">
+                <th>
+                    <span class="span">Telefon</span>
+                </th>
+                <th>
+                    <span class="span">{{getUser().danismanTelefonNumarasi}}</span>
+                </th>
+            </tr>
+            <tr class="tr">
+                <th>
+                    <span class="span">E-Posta</span></th>
+                <th>
+                    <span class="span">{{getUser().danismanEMail}}</span>
+                </th>
+            </tr>
+            <tr class="btntr">
+                <a class="btn" href="#">Ders Programı</a>
+            </tr>
+        </tbody>
+    </table>
+</div>

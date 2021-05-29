@@ -1,1 +1,14 @@
-<p>ogrenci-transkript works!</p>
+<table>
+    <thead>
+        <tr>
+            <th>Ders Adı</th>
+            <th>Harf Notu</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let not of notsVize; index as i">
+        <tr >
+          <th>{{not.dersAdi}}</th>
+          <th>{{ortalamaHesapla(not.sinavNot,notsButunleme[i].sinavNot)}}</th>    
+      </tr>
+  </tbody>
+</table>

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AkademisyenDetayDto } from 'src/app/models/detayModels/akademisyenDetayDto';
+import { AkademisyenService } from 'src/app/services/akademisyen.service';
+import { LocalStorageService } from 'src/app/services/local-storage-service.service';
 
 @Component({
   selector: 'app-akademisyen-kullanici-bilgileri',
@@ -6,10 +9,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./akademisyen-kullanici-bilgileri.component.css']
 })
 export class AkademisyenKullaniciBilgileriComponent implements OnInit {
-
-  constructor() { }
+  akademisyenDetayDto:AkademisyenDetayDto
+  constructor(private localStorageService:LocalStorageService,
+    private akademisyenService:AkademisyenService) { }
 
   ngOnInit(): void {
+    this.getBilgiler()
   }
-
+   getBilgiler(){
+     this.akademisyenDetayDto = this.localStorageService.get('user')[0]
+   }
+   
 }
