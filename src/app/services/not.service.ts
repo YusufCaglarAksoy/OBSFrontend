@@ -13,7 +13,7 @@ export class NotService {
 
   constructor(private httpClient :HttpClient) { }
 
-  apiUrl = 'https://localhost:44390/api/notlar/'
+  apiUrl = 'https://webapi20210602160905.azurewebsites.net/api/notlar/'
 
   add(not : Not):Observable<ResponseModel> {
     return this.httpClient.post<ResponseModel>(this.apiUrl+"add",not)

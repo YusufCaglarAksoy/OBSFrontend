@@ -1,0 +1,19 @@
+.list-unstyled .box{
+    border: 0;
+    background: none;
+    display: block;
+    text-align: center;
+    background-color: rgba(155, 30, 72, 0.548);
+    border: 2px solid #ffffffa2;
+    padding: 3px ;
+    margin: 4px;
+    width: 200px;
+    outline: none;
+    border-radius: 35px;
+    color: #ffffff;
+    transition: 0.25s;
+}
+.box .text-white{
+    text-decoration: none;
+    opacity: 1.4;
+}

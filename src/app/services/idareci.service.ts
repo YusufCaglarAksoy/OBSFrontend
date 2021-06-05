@@ -14,7 +14,7 @@ import { SingleResponseModel } from '../models/responseModels/singleResponseMode
   providedIn: 'root'
 })
 export class IdareciService {
-  apiUrl = 'https://localhost:44390/api/idareciler/'
+  apiUrl = 'https://webapi20210602160905.azurewebsites.net/api/idareciler/'
   constructor(private httpClient:HttpClient) { }
 
   add(idareci:IdareciForRegisterDto):Observable<ResponseModel>{

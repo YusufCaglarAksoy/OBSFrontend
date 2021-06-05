@@ -14,7 +14,7 @@ export class SubeService {
 
   constructor(private httpClient :HttpClient) { }
 
-  apiUrl = 'https://localhost:44390/api/subeler/'
+  apiUrl = 'https://webapi20210602160905.azurewebsites.net/api/subeler/'
 
   add(sube : Sube):Observable<ResponseModel> {
     return this.httpClient.post<ResponseModel>(this.apiUrl+"add",sube)

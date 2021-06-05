@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { LocalStorageService } from './services/local-storage-service.service';
 
 @Component({
@@ -9,7 +10,8 @@ import { LocalStorageService } from './services/local-storage-service.service';
 export class AppComponent {
   title = 'ogrenciBilgiSistemi';
 
-  constructor(private localStorageService:LocalStorageService){}
+  constructor(private localStorageService:LocalStorageService,
+              private store:AngularFirestore) {}
 
   checkHomePage(){
     if(window.location.pathname==="/"||window.location.pathname==="/akademisyen/login"|| window.location.pathname==="/idareci/login"|| window.location.pathname==="/ogrenci/login"){

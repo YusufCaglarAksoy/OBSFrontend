@@ -15,7 +15,7 @@ import { LocalStorageService } from './local-storage-service.service';
   providedIn: 'root'
 })
 export class OgrenciService {
-  apiUrl = 'https://localhost:44390/api/ogrenciler/'
+  apiUrl = 'https://webapi20210602160905.azurewebsites.net/api/ogrenciler/'
   constructor(private httpClient :HttpClient,
               private localStorageService:LocalStorageService) { }
 

@@ -13,7 +13,7 @@ import { SingleResponseModel } from '../models/responseModels/singleResponseMode
 export class AkademisyenFotografService {
   constructor(private httpClient : HttpClient) { }
 
-  apiUrl = 'https://localhost:44390/api/akademisyenlerFotograflar/'
+  apiUrl = 'https://webapi20210602160905.azurewebsites.net/api/akademisyenlerFotograflar/'
 
   add( image : File , ogrenciId:number):Observable<ResponseModel> {
     const formData:FormData = new FormData();

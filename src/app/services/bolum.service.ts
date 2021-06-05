@@ -12,7 +12,7 @@ import { ResponseModel } from '../models/responseModels/ResponseModel';
 export class BolumService {
   constructor(private httpClient :HttpClient) { }
 
-  apiUrl = 'https://localhost:44390/api/bolumler/'
+  apiUrl = 'https://webapi20210602160905.azurewebsites.net/api/bolumler/'
 
   add(bolum : Bolum):Observable<ResponseModel> {
     return this.httpClient.post<ResponseModel>(this.apiUrl+"add",bolum)

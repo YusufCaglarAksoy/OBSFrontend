@@ -59,6 +59,9 @@ import { MatSelectModule} from '@angular/material/select';
 import { MatButtonModule} from '@angular/material/button';
 import { MatInputModule} from '@angular/material/input';
 import { AkademisyenSinavTakvimiComponent } from './components/akademisyenComponents/genelislemler/akademisyen-sinav-takvimi/akademisyen-sinav-takvimi.component';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -125,7 +128,9 @@ import { AkademisyenSinavTakvimiComponent } from './components/akademisyenCompon
     MatSelectModule,
     ToastrModule.forRoot({
       positionClass:"toast-bottom-right"
-    })
+    }),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
   ],
   providers: [
     {provide:HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi:true}

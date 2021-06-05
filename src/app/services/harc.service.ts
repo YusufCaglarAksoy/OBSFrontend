@@ -13,7 +13,7 @@ export class HarcService {
 
   constructor(private httpClient :HttpClient) { }
 
-  apiUrl = 'https://localhost:44390/api/harclar/'
+  apiUrl = 'https://webapi20210602160905.azurewebsites.net/api/harclar/'
 
   add(harc : Harc):Observable<ResponseModel> {
     return this.httpClient.post<ResponseModel>(this.apiUrl+"add",harc)

@@ -13,7 +13,7 @@ import { OgrenciFotografService } from 'src/app/services/ogrenci-fotograf.servic
 export class OgrenciNavbarComponent implements OnInit {
   ogrenciFotograf:OgrenciFotograf
   ogrenciDetayDto:OgrenciDetayDto
-  apiUrl:string="https://localhost:44390/images/"
+  apiUrl:string="https://webapi20210602160905.azurewebsites.net/images/"
   fotografYolu:string
   toastrService: any;
 

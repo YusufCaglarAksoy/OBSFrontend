@@ -13,7 +13,7 @@ export class OgrenciFotografService {
 
   constructor(private httpClient : HttpClient) { }
 
-  apiUrl = 'https://localhost:44390/api/ogrencilerfotograflar/'
+  apiUrl = 'https://webapi20210602160905.azurewebsites.net/api/ogrencilerfotograflar/'
 
   add( image : File , ogrenciId:number):Observable<ResponseModel> {
     const formData:FormData = new FormData();

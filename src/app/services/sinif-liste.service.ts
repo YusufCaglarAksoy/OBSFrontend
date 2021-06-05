@@ -10,7 +10,7 @@ import { SinifListe } from '../models/sinifListe';
   providedIn: 'root'
 })
 export class SinifListeService {
-  apiUrl = 'https://localhost:44390/api/sinifListeler/'
+  apiUrl = 'https://webapi20210602160905.azurewebsites.net/api/sinifListeler/'
   constructor(private httpClient:HttpClient) { }
 
   add(SinifListe: SinifListe):Observable<ResponseModel>{

@@ -13,7 +13,7 @@ import { LocalStorageService } from 'src/app/services/local-storage-service.serv
 export class IdareciNavbarComponent implements OnInit {
 
   idareciDetayDto:IdareciDetayDto
-  apiUrl:string="https://localhost:44390/images/"
+  apiUrl:string="https://webapi20210602160905.azurewebsites.net/images/"
   fotografYolu:string
   toastrService: any;
 

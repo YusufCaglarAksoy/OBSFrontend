@@ -14,7 +14,7 @@ import { SingleResponseModel } from '../models/responseModels/singleResponseMode
   providedIn: 'root'
 })
 export class AkademisyenService {
-  apiUrl = 'https://localhost:44390/api/akademisyenler/'
+  apiUrl = 'https://webapi20210602160905.azurewebsites.net/api/akademisyenler/'
   constructor(private httpClient :HttpClient) { }
 
   add(akademisyen : AkademisyenForRegisterDto):Observable<ResponseModel> {

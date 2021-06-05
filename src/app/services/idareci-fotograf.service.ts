@@ -10,7 +10,7 @@ import { SingleResponseModel } from '../models/responseModels/singleResponseMode
   providedIn: 'root'
 })
 export class IdareciFotografService {
-  apiUrl = 'https://localhost:44390/api/idarecilerfotograflar/'
+  apiUrl = 'https://webapi20210602160905.azurewebsites.net/api/idarecilerfotograflar/'
   constructor(private httpClient:HttpClient) { }
 
   add(idareciFotograf:IdareciFotograf):Observable<ResponseModel>{

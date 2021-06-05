@@ -37,7 +37,7 @@
               "src/styles.css"
             ],
             "scripts": [
-              "./node_modules/jquery/dist/jquery.min.js", 
+              "./node_modules/jquery/dist/jquery.min.js",
               "./node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           },
@@ -59,8 +59,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "1mb",
+                  "maximumError": "2mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -130,6 +130,10 @@
               "devServerTarget": "ogrenciBilgiSistemi:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }

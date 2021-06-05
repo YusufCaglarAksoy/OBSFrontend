@@ -10,7 +10,7 @@ import { ResponseModel } from '../models/responseModels/ResponseModel';
 })
 export class MailService {
   
-  apiUrl = 'https://localhost:44390/api/mailler/'
+  apiUrl = 'https://webapi20210602160905.azurewebsites.net/api/mailler/'
 
   constructor(private httpClient:HttpClient) { }
 

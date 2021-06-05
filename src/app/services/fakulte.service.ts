@@ -12,7 +12,7 @@ export class FakulteService {
 
   constructor(private httpClient :HttpClient) { }
 
-  apiUrl = 'https://localhost:44390/api/fakulteler/'
+  apiUrl = 'https://webapi20210602160905.azurewebsites.net/api/fakulteler/'
 
   add(fakulte : Fakulte):Observable<ResponseModel> {
     return this.httpClient.post<ResponseModel>(this.apiUrl+"add",fakulte)

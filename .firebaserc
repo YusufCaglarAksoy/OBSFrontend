@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ogrencibilgisistemifirat": {
+      "hosting": {
+        "ogrenciBilgiSistemi": [
+          "ogrencibilgisistemifirat"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ogrencibilgisistemifirat"
+  }
+}

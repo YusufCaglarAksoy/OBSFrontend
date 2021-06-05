@@ -13,7 +13,7 @@ export class DersKayitService {
 
   constructor(private httpClient :HttpClient) { }
 
-  apiUrl = 'https://localhost:44390/api/derskayitlar/'
+  apiUrl = 'https://webapi20210602160905.azurewebsites.net/api/derskayitlar/'
 
   add(dersKayit : DersKayit):Observable<ResponseModel> {
     return this.httpClient.post<ResponseModel>(this.apiUrl+"add",dersKayit)

@@ -12,7 +12,7 @@ import { Sinav } from '../models/sinav';
 export class SinavService {
   constructor(private httpClient :HttpClient) { }
 
-  apiUrl = 'https://localhost:44390/api/sinavlar/'
+  apiUrl = 'https://webapi20210602160905.azurewebsites.net/api/sinavlar/'
 
   add(sinav : Sinav):Observable<ResponseModel> {
     return this.httpClient.post<ResponseModel>(this.apiUrl+"add",sinav)

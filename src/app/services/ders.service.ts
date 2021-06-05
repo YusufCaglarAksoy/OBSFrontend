@@ -12,7 +12,7 @@ import { ResponseModel } from '../models/responseModels/ResponseModel';
 export class DersService {
   constructor(private httpClient :HttpClient) { }
 
-  apiUrl = 'https://localhost:44390/api/dersler/'
+  apiUrl = 'https://webapi20210602160905.azurewebsites.net/api/dersler/'
 
   add(ders : Ders):Observable<ResponseModel> {
     return this.httpClient.post<ResponseModel>(this.apiUrl+"add",ders)
